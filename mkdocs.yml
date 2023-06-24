@@ -4,6 +4,15 @@ theme:
     name: 'material'
     palette:
 
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: pink
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
