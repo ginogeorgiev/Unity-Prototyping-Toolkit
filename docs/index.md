@@ -9,38 +9,8 @@ Welcome to the official Unity Prototyping Toolkit documentation.
  -  it will make it easy for you to connect various features and establish gamestateflow
 
 ##### What are the Modules:
-- Core:
-	-  Attributes
-	-  Command Logic
-	-  Events
-		-  [[EmptyEvent]]
-		-  [[DataEvent]]
-	-  GameController
-	-  RuntimeSet
-	-  Selection
-	-  State Logic
-	-  Variables
-		-  Primitive Types
-		-  Unity Types
--  Cameras
-	-  FirstPerson
-	-  Isometric
-	-  RTS
-	-  SideScroller
-	-  ThirdPerson
-	-  TopDown
--  Demos
-	-  Camera
-	-  Player
-	-  Events
-	-  GameController
--  [[Script Templates]]
-	-  Behaviour
-	-  ScriptableObjects
-	-  Controller
-	-  Manager
-	-  EmptyEvent
-	-  DataEvent
+
+[[Content]]
 
 ##### Other external Tools used with this Toolkit
 
