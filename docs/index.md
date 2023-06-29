@@ -34,7 +34,7 @@ Welcome to the official Unity Prototyping Toolkit documentation.
 	-  Player
 	-  Events
 	-  GameController
--  ScriptTemplates
+-  [[Script Templates]]
 	-  Behaviour
 	-  ScriptableObjects
 	-  Controller
