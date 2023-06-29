@@ -1,5 +1,5 @@
 Why better?
-The normal Tooltip attributes never indicates whether a Tooltip is there or not, with this it always shows an Icon when there is a Tooltip in the inspector.
+The normal Tooltip attributes never indicates whether a Tooltip is there or not, with this it always shows an icon when there is a Tooltip in the inspector.
 
 How to use:
 
