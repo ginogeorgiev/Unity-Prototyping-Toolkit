@@ -31,19 +31,20 @@ newEmptyEvent.Raise(SomeData);
 
 #### 5. Respond to the Event via Code
 
--  Reference the Event and respond to it with parameter if needed
+- Register the Event in OnEnable and Unregister it in OnDisable
+- Reference the Event and respond to it with parameter if needed
 
 ```csharp
 [SerializeField] private SomeDataEvent someDataEvent;
 
 private void OnEnable()
 {
-   someDataEvent.Register(OnDoSomething);
+   someDataEvent.Register(OnSomeEvent);
 }
 
 private void OnDisable()
 {
-   newEmptyEvent.Unregister(OnDoSomething);
+   someDataEvent.Unregister(OnSomeEvent);
 }
 
 private void OnSomeEvent(SomeData someData)
