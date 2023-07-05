@@ -22,10 +22,10 @@ Events
 
 
 After creating one of those Scripts:
-- adjust Namespace
-- adjust menuName or fileName if its a ScriptableObject
-- adjust fields
-- remove unused methods
+-  adjust Namespace
+-  adjust menuName or fileName if its a ScriptableObject
+-  adjust fields
+-  remove unused methods
 
 Example for ScriptableObject:
 
