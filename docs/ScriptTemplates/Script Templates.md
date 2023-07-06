@@ -5,21 +5,24 @@ This also shows how they look and can be created on their own.
 
 Adjust those Scripts to your liking and what works best for you.
 
-![[Pasted image 20230628105158.png]]
+![[Pasted image 20230706140628.png]]
 
-UnityScripts
-	- Behaviour
-	- ScriptableObject
-	- Controller
-	- Manager
-Class/Interface
-	- Class
-	- AbstractClass
-	- Interface
-Events
-	- [[Create your own typed EmptyEvent]]
-	- [[Create your own typed DataEvent]]
-
+Unity Scripts
+- Behaviour
+- SciptableObject
+- Controller
+- Manager
+Classes
+- Class
+- Serializable Class
+- Abstract Class
+- Interface
+Toolkit Classes
+- [[EmptyEvent]]
+- [[DataEvent]]
+- [[Selection]]
+- [[RuntimeSet]]
+- [[State]]
 
 After creating one of those Scripts:
 -  adjust Namespace

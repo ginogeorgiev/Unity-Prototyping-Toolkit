@@ -2,6 +2,8 @@
 
 Welcome to the official Unity Prototyping Toolkit documentation.
 
+This Toolkit tries to incorporate and support a Domain / Feature driven project structure.
+
 ### Quick Overview
 
 ##### What does the Toolkit and where can it help you:

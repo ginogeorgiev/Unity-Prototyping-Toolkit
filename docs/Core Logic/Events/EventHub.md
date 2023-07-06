@@ -2,6 +2,8 @@ The EventHub serves as a central manager for events in your project. It allows y
 
 You can either create one EventHub for the whole game or multiple based an your needs.
 
+##### See also [[Feature Domain]] to create your own
+
 #### 1. Create an EventHub
 
 To create an EventHub, follow these steps:
@@ -17,7 +19,7 @@ To create an EventHub, follow these steps:
 After creating the EventHub, you need to set it up for event parsing and configuration. Follow these steps:
 
 1. Drag and drop the path from which you want to parse all the events into the "Path" field of the EventHub.
-2. Press the "Parse All Events in Path" button to initiate the parsing process. This will scan the specified path for events and populate the EventHub with the parsed events.
+2. Press the "Parse All Events in Path" button to initiate the parsing process. This will scan the specified path for events and populate the EventHub with the parsed [[EmptyEvent]]s and [[DataEvent]]s.
 
 ![[Pasted image 20230705150541.png]]
 

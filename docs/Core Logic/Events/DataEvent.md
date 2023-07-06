@@ -1,6 +1,7 @@
-How to create and use DataEvents.
 
 DataEvents are a powerful mechanism in your project that allow you to send events along with associated data at runtime. With DataEvents, you can easily notify other systems, objects, or scripts about specific occurrences and provide them with relevant information. These events can be listened to and responded to in code, enabling seamless communication and coordination between different parts of your project. Whether you need to trigger actions, update UI elements, or synchronize data between systems, DataEvents provide a flexible and efficient solution. This documentation will guide you through the process of creating, configuring, and using DataEvents effectively in your project.
+
+### How to create and use DataEvents.
 
 #### 1. Create a DataEvent Script
 
@@ -12,9 +13,9 @@ See: [[Create your own typed DataEvent]]
 
 #### 3. Set Up the Event
 
--  Choose to log when the event is raised and select a color if needed.
+-  Choose a [[Feature Domain]] if needed
 
-![[Pasted_image_20230624115513.png]]
+![[Pasted image 20230706113409.png]]
 
 -  The List in the Debug area will fill at runtime if there are any Listeners, this way they can be found in the Scene-Hierarchy
 -  The Event can also be raised at runtime for testing purposes, but the right object needs to be referenced first. Keep in mind this does only work for serializable instances

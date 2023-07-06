@@ -10,15 +10,15 @@ You can also [[Create your own typed EmptyEvent]] if needed.
 
 ![[Pasted image 20230623123808.png]]
 
-#### 2. Name The Event
+#### 2. Name the Event
 
 ![[Pasted image 20230623124508.png]]
 
 #### 3. Set Up the Event
 
--  Choose to log when the event is raised and select a color if needed.
+-  Choose a [[Feature Domain]] if needed
 
-![[Pasted image 20230623124641.png]]
+![[Pasted image 20230706113219.png]]
 
 -  The Lists in the Debug area will fill at runtime if there are any Listeners, this way they can be found in the Scene-Hierarchy
 -  The Event can also be raised at runtime for testing purposes
