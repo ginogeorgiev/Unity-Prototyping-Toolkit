@@ -21,4 +21,6 @@ This Toolkit tries to incorporate and support a Domain / Feature driven project 
 -  [Cinemachine](https://docs.unity3d.com/Packages/com.unity.cinemachine@2.3/manual/index.html)
 -  [DoTween](http://dotween.demigiant.com/getstarted.php)
 
-Some of the Modules like Events, Variables and RuntimeSets are based on the ScriptableObject Architecture of Ryan Hipple [Repository](https://github.com/roboryantron/Unite2017)
+Some of the Modules:
+- like Events, Variables and RuntimeSets are based on the ScriptableObject Architecture of Ryan Hipple [Repository](https://github.com/roboryantron/Unite2017)
+- like Pool and Factory are from the unity open Project [Chop Chop](https://github.com/UnityTechnologies/open-project-1)
