@@ -21,7 +21,9 @@ Adjust those Scripts to your liking and what works best for you.
 ||[[DataEvent]]|Event with a specific data payload.|
 ||[[Selection]]|Class that handles selection of objects.|
 ||[[RuntimeSet]]|Collection of objects that can be dynamically modified at runtime.|
-||[[State]]|Class that represents a specific state in a state machine.|
+||[[States\|State]]|Class that represents a specific state in a state machine.|
+||[[States\|StateMachine]]|Monobehaviour that represents a StateMachine.|
+
 
 After creating one of those Scripts:
 -  adjust Namespace
@@ -36,7 +38,9 @@ using UnityEngine;
   
 namespace Logic  
 {  
-   [CreateAssetMenu(fileName = "newSomeData", menuName = "Features/FeatureA/SomeData")]  
+   [CreateAssetMenu(
+   fileName = "newSomeData",
+   menuName = "Features/FeatureA/SomeData")]
    public class SomeData : ScriptableObject  
    {
       [Header("Data")]

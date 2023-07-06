@@ -66,7 +66,7 @@ namespace Logic
     public class SomeStateMachine : StateMachine  
     {  
         private SomeState someState;
-        private SomeState someOtherState;
+        private SomeOtherState someOtherState;
 
 		private void Awake()  
 		{
@@ -86,3 +86,5 @@ namespace Logic
     }  
 }
 ```
+
+You can also use the [[Script Templates]] for States and StateMachine.

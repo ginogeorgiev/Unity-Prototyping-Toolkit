@@ -2,15 +2,15 @@
 - Core:
 	-  Attributes
 		- [[BetterTooltip]]
-	-  Command Logic
+	-  [[Commands]]
 	-  Events
 		-  [[EventHub]]
 		-  [[EmptyEvent]]
 		-  [[DataEvent]]
 	-  GameController
 	-  [[RuntimeSet]]
-	-  Selection
-	-  [[State]]
+	-  [[Selection]]
+	-  [[States]]
 	-  [[Variables]]
 		-  Primitive Types
 		-  Unity Types
