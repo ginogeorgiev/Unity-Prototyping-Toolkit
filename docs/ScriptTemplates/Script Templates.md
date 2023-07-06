@@ -7,22 +7,21 @@ Adjust those Scripts to your liking and what works best for you.
 
 ![[Pasted image 20230706140628.png]]
 
-Unity Scripts
-- Behaviour
-- SciptableObject
-- Controller
-- Manager
-Classes
-- Class
-- Serializable Class
-- Abstract Class
-- Interface
-Toolkit Classes
-- [[EmptyEvent]]
-- [[DataEvent]]
-- [[Selection]]
-- [[RuntimeSet]]
-- [[State]]
+|Category|Class|Description|
+|---|---|---|
+|**Unity Scripts**|Behaviour|Base class for script components attached to GameObjects.|
+||ScriptableObject|Base class for creating assets with serialized data.|
+||Controller|Class that handles input and controls game behavior.|
+||Manager|Class that manages specific game systems or functionalities.|
+|**Classes**|Class|Basic unit of code organization.|
+||Serializable Class|Class that can be serialized and stored in various formats.|
+||Abstract Class|Class that cannot be instantiated but serves as a base for others.|
+||Interface|Contract that defines a set of methods and properties.|
+|**Toolkit Classes**|[[EmptyEvent]]|Event without any specific data payload.|
+||[[DataEvent]]|Event with a specific data payload.|
+||[[Selection]]|Class that handles selection of objects.|
+||[[RuntimeSet]]|Collection of objects that can be dynamically modified at runtime.|
+||[[State]]|Class that represents a specific state in a state machine.|
 
 After creating one of those Scripts:
 -  adjust Namespace
