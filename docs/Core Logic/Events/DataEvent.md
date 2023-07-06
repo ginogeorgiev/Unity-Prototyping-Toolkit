@@ -27,7 +27,7 @@ See: [[Create your own typed DataEvent]]
 ```csharp
 [SerializeField] private SomeDataEvent someDataEvent;
 
-newEmptyEvent.Raise(SomeData);
+newEmptyEvent.Raise(Something);
 ```
 
 #### 5. Respond to the Event via Code

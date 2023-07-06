@@ -1,6 +1,8 @@
 
 Variables are atomic representations of either primitive or Unity types. They provide a way to store and share data between features, promoting decoupling and modularity in your project.
 
+You can also Create your own Variables by looking at the examples.
+
 #### 1. Create a Variable in the Editor
 
 To create a variable, follow these steps:
@@ -21,7 +23,35 @@ Once the variable is created, you can adjust its values and settings in the Insp
 - The ``Current Value`` represents the actual value of the variable during runtime. It can be modified at runtime for testing purposes or to reflect dynamic changes in your project.
 - The ``On Current Changed`` event is optional and can be used to define a callback that will be invoked when the "Current Value" is changed. 
 
-#### 3. API
+#### 3. How to use the Variable
+
+```csharp
+public class Something : MonoBehaviour
+{
+	[SerializeField] private FloatVariable someVariable;  
+	  
+	private void DoSomething()
+	{
+		someVariable.Set(10);
+	}
+}
+```
+
+#### 4. Use the Variable
+
+```csharp
+public class Something : MonoBehaviour
+{
+	[SerializeField] private FloatVariable someVariable;  
+	  
+	private void DoSomething()
+	{
+		Some some = someVariable.Get();
+	}
+}
+```
+
+#### API
 
 The following public methods are available for working with variables:
 

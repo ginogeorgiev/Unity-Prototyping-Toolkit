@@ -22,7 +22,7 @@ namespace Logic
    [CreateAssetMenu(
    fileName = "SomeDataEvent",
    menuName = "FEATURENAME/SomeDataEvent")]
-   public class SomeEvent : DataEvent<SomeData> { }  
+   public class SomeEvent : DataEvent<Something> { }  
 }
 ```
 
