@@ -26,6 +26,7 @@ Adjust those Scripts to your liking and what works best for you.
 
 
 After creating one of those Scripts:
+
 -  adjust Namespace
 -  adjust menuName or fileName if its a ScriptableObject
 -  adjust fields
