@@ -10,6 +10,8 @@ This Toolkit tries to incorporate and support a Domain / Feature driven project 
  -  it is here to speed up the process of developing prototypes with unity
  -  it will make it easy for you to connect various features and establish gamestateflow
 
+### [[Quick Setup]]
+
 ##### What are the Modules:
 
 [[Content]]
@@ -22,5 +24,7 @@ This Toolkit tries to incorporate and support a Domain / Feature driven project 
 -  [DoTween](http://dotween.demigiant.com/getstarted.php)
 
 Some of the Modules:
-- like Events, Variables and RuntimeSets are based on the ScriptableObject Architecture of Ryan Hipple [Repository](https://github.com/roboryantron/Unite2017)
-- like Pool and Factory are from the unity open Project [Chop Chop](https://github.com/UnityTechnologies/open-project-1)
+
+-  like Events, Variables and RuntimeSets are based on the ScriptableObject Architecture of Ryan Hipple [Repository](https://github.com/roboryantron/Unite2017), [Talk](https://www.youtube.com/watch?v=raQ3iHhE_Kk)
+-  like audio Events from Richard Fine [Repository](https://github.com/richard-fine/scriptable-object-demo), [Talk](https://www.youtube.com/watch?v=6vmRwLYWNRo)
+-  like Pool and Factory are from the unity open Project [Chop Chop](https://github.com/UnityTechnologies/open-project-1)

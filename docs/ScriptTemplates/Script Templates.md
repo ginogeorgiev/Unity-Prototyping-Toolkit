@@ -48,11 +48,7 @@ namespace Logic
       [SerializeField] private ScriptableObject data;
       
       public ScriptableObject Data => data;
-      
-      private void Awake()
-      {     
-      
-      }  
+       
       private void OnEnable()
       {
       
