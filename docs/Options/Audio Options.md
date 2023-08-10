@@ -3,6 +3,7 @@
 
 The Audio Settings Manager is a Prefab and will make sure that changes to the [[Audio Data]] Variables via Inspector or ingame in the Audio Options are handled and manipulate the Audio Mixer.
 
+---
 #### Audio Slider
 
 The Audio Slider is a UI prefab that allows to change Volume Float Variables
@@ -11,6 +12,7 @@ The Audio Slider is a UI prefab that allows to change Volume Float Variables
 
 ![[Pasted image 20230810151134.png]]
 
+---
 #### Audio Toggle
 
 The Audio Toggle is a UI prefab that allows to toggle Audio Bool Variables
