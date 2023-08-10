@@ -1,6 +1,6 @@
 Feature domains are here to help you categorize your ScriptableObjects into Domains.
 
-The only use case is the [[EventHub]] for now.
+The only use case is the [[Event Hub]] for now.
 
 #### 1. Create your own Feature Domain
 
@@ -12,4 +12,4 @@ The only use case is the [[EventHub]] for now.
 
 #### 3. Reference it where needed
 
-When creating a new FeatureScriptableObject like [[EmptyEvent]] you can set the Domain.
+When creating a new FeatureScriptableObject like [[Empty Event]] you can set the Domain.

@@ -17,12 +17,12 @@ Adjust those Scripts to your liking and what works best for you.
 ||Serializable Class|Class that can be serialized and stored in various formats.|
 ||Abstract Class|Class that cannot be instantiated but serves as a base for others.|
 ||Interface|Contract that defines a set of methods and properties.|
-|**Toolkit Classes**|[[EmptyEvent]]|Event without any specific data payload.|
-||[[DataEvent]]|Event with a specific data payload.|
+|**Toolkit Classes**|[[Empty Event]]|Event without any specific data payload.|
+||[[Data Event]]|Event with a specific data payload.|
 ||[[Selection]]|Class that handles selection of objects.|
-||[[RuntimeSet]]|Collection of objects that can be dynamically modified at runtime.|
-||[[States\|State]]|Class that represents a specific state in a state machine.|
-||[[States\|StateMachine]]|Monobehaviour that represents a StateMachine.|
+||[[Runtime Set]]|Collection of objects that can be dynamically modified at runtime.|
+||[[State Logic|State]]|Class that represents a specific state in a state machine.|
+||[[State Logic|StateMachine]]|Monobehaviour that represents a StateMachine.|
 
 
 After creating one of those Scripts:

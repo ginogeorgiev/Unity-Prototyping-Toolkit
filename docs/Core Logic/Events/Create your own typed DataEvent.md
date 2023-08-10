@@ -1,4 +1,4 @@
-### Create your own typed [[DataEvent]]
+### Create your own typed [[Data Event]]
 
 ##### See also: [[Create your own typed EmptyEvent]]
 

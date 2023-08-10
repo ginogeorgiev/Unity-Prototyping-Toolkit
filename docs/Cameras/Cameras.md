@@ -37,6 +37,8 @@ The RTS Camera is tailored for real-time strategy games, providing a bird's-eye 
 
 4. **Adjust the Settings**:
     - For the camera using Cinemachine, you can fine-tune its behavior and properties by modifying the **Cinemachine Settings**. This allows you to control aspects such as camera movement, tracking, and transitions.
-    - For the RTS (Real-Time Strategy) camera, you will need to adjust the **RTS_Camera_settings** asset. This asset contains specific settings for the RTS camera, such as zoom levels, rotation limits, and panning speed. You can create a new asset using the "Create Asset" menu (Create/PrototypingToolkit/Cameras/RTS Camera Settings) or make a copy of the existing asset to customize it according to your needs.![[Pasted image 20230705122222.png]]
+    - For the RTS (Real-Time Strategy) camera, you will also need to adjust the **RTS_Camera_settings**
+      asset. This asset contains specific settings for the RTS camera, such as zoom levels, rotation limits, and panning speed.
+      You can create a new asset using the "Create Asset" menu (Create/PrototypingToolkit/Cameras/RTS Camera Settings) or make a copy of the existing asset to customize it according to your needs.![[Pasted image 20230705122222.png]]
 
 Feel free to experiment with the camera settings and iterate on them to achieve the desired camera behavior for your game.
