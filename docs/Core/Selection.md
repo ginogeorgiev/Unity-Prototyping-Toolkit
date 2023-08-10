@@ -73,7 +73,10 @@ public class SomeBehaviour : MonoBehaviour
 	private void OnSelectionChanged()
 	{
 		Something something = someSelection.Get();
+		if (something != null)
+		{
 		// Add Logic here
+		}
 	}
 }
 ```

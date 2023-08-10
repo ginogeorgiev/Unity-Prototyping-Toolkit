@@ -41,6 +41,8 @@ newEmptyEvent.Raise();
 
 #### 5a. Respond to the Event in the Inspector with EmptyEventListener
 
+###### EmptyEventListener
+
 The EmptyEventListener component enables easy event handling for EmptyEvents in Unity. By attaching it to a GameObject, you can define actions or behaviors that trigger when an EmptyEvent is raised. This decouples event senders and receivers, promoting modular and maintainable code. With the EmptyEventListener, you can seamlessly respond to events without direct code coupling. This documentation guides you through the setup and usage of the EmptyEventListener component to handle EmptyEvents efficiently in your Unity project.
 
 -  Add the EmptyEventListener Component to any GameObject

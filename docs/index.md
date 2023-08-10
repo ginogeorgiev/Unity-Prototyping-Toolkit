@@ -13,6 +13,15 @@ Welcome to the Unity Prototyping Toolkit documentation. This toolkit is designed
 
 ### [[Getting to know some Modules]]
 
+---
+## Modules
+
+**Detailed information about the modules included in the Unity Prototyping Toolkit.**:
+### [[List of Modules]]
+
+The Unity Prototyping Toolkit encompasses a range of modules designed to address specific development needs. Explore the documentation to learn more about each module and how it can contribute to your prototyping journey.
+
+Whether you're a solo developer, part of a team, or just eager to experiment with game ideas, the Unity Prototyping Toolkit is here to help you bring your visions to life. Let's dive in and explore the features and functionalities that await you!
 
 ---
 ## Purpose of the Toolkit
@@ -34,16 +43,8 @@ The primary purpose of the Unity Prototyping Toolkit is to address the challenge
 
 - **Enhanced Testing:** The toolkit's design facilitates efficient testing, enabling you to iterate and refine your prototype's mechanics rapidly.
 
-## Modules and Resources
-
-The Unity Prototyping Toolkit encompasses a range of modules designed to address specific development needs. Explore the documentation to learn more about each module and how it can contribute to your prototyping journey.
-
-Whether you're a solo developer, part of a team, or just eager to experiment with game ideas, the Unity Prototyping Toolkit is here to help you bring your visions to life. Let's dive in and explore the features and functionalities that await you!
-
-**Detailed information about the modules included in the Unity Prototyping Toolkit.**:
-### [[Modules]]
-
 ---
+## Resources
 #### Other external Tools used with this Toolkit
 
 -  [MyBox](https://github.com/Deadcows/MyBox)
@@ -54,6 +55,6 @@ Whether you're a solo developer, part of a team, or just eager to experiment wit
 #### Some Other Useful Modules: 
 (Sometimes used to build some of this Toolkits Structure and Code)
 
--  like Events, Variables and RuntimeSets are based on the ScriptableObject Architecture of Ryan Hipple [Repository](https://github.com/roboryantron/Unite2017), [Talk](https://www.youtube.com/watch?v=raQ3iHhE_Kk)
--  like audio Events from Richard Fine [Repository](https://github.com/richard-fine/scriptable-object-demo), [Talk](https://www.youtube.com/watch?v=6vmRwLYWNRo)
--  like Pool and Factory and Audio are from the Unity open-Project [Chop Chop](https://github.com/UnityTechnologies/open-project-1)
+-  Events, Variables and RuntimeSets are based on the ScriptableObject Architecture of Ryan Hipple [Repository](https://github.com/roboryantron/Unite2017), [Talk](https://www.youtube.com/watch?v=raQ3iHhE_Kk)
+-  Audio Events from Richard Fine [Repository](https://github.com/richard-fine/scriptable-object-demo), [Talk](https://www.youtube.com/watch?v=6vmRwLYWNRo)
+-  Pool and Factory and Audio are from the Unity open-Project [Chop Chop](https://github.com/UnityTechnologies/open-project-1)
