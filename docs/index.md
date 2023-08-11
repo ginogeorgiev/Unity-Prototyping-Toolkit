@@ -7,17 +7,17 @@ Welcome to the Unity Prototyping Toolkit documentation. This toolkit is designed
 ---
 ## How to Start
 
-### [[Q1 Quick Setup - Installation Guide]]
+### [[Q1 Quick Setup - Installation Guide|Quick Setup - Installation Guide]]
 
-### [[Q2 Quick Start Guide]]
+### [[Q2 Quick Start Guide|Quick Start Guide]]
 
-### [[Q3 Getting to know some Modules]]
+### [[Q3 Getting to know some Modules|Getting to know some Modules]]
 
 ---
 ## Modules
 
 **Detailed information about the modules included in the Unity Prototyping Toolkit.**:
-### [[Q4 List of Modules]]
+### [[Q4 List of Modules|List of Modules]]
 
 The Unity Prototyping Toolkit encompasses a range of modules designed to address specific development needs. Explore the documentation to learn more about each module and how it can contribute to your prototyping journey.
 
