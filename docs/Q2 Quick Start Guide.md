@@ -1,4 +1,3 @@
-
 # Quick Start Guide
 
 Welcome to the Quick Start Guide for the Unity Prototyping Toolkit. In this guide, you'll find step-by-step instructions to help you get started with the toolkit's functionality. All the examples and resources mentioned here can be found in the Quick Start Guide Sample Folder.
@@ -11,7 +10,9 @@ Let's dive into the guide and explore the features and workflows that the Unity 
 ---
 ### What We're Implementing in This Guide (Estimated Time: ~2 hours)
 
-	In this section, we'll outline the key components we'll be working on during the course of this guide. These implementations are essential to creating a simple game loop.
+	In this section, we'll outline the key components	we'll be working on during
+	the course of this guide. These implementations are essential to creating
+	a simple game loop.
 
 1. **Simple Player and Camera Setup** _(Approx. 20 minutes)_
     - Create a basic player character with planar movement controls.
@@ -25,7 +26,8 @@ Let's dive into the guide and explore the features and workflows that the Unity 
 
 ### Bonus Implementations (Estimated Time: ~2 hours)
 
-	These additional implementations are beneficial for enhanced testing and iteration of your prototype.
+	These additional implementations are beneficial for enhanced
+	testing and iteration of your prototype.
 
 1. **Player Skill for Dealing Damage** _(Approx. 30 minutes)_
     - Introduce a skill that allows the player to deal damage to enemies in proximity.
@@ -438,7 +440,8 @@ And we have to add the AudioSettingsManager to our scene
 
 ---
 ##### Now its your turn:
-	Add some extras to learn more about PTK, and improve your playtesting environment:
+	Add some extras to learn more about PTK,
+	and improve your playtesting environment:
 -  Add a timer and an indicator that shows how many enemies you have surpassed
 -  Add an Input rebind menu for the player controls
 -  Add another skill (a dash perhaps)

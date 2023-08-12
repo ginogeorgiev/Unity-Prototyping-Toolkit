@@ -1,3 +1,4 @@
+# Quick Setup - Installation Guide
 
 0. Create a new Unity Project or use an existing one
 1. Install Cinemachine (Unity Package Manger)
