@@ -11,17 +11,17 @@ Welcome to the Unity Prototyping Toolkit documentation. This toolkit is designed
 
 ### [[Q2 Quick Start Guide|Quick Start Guide]]
 
-### [[Q3 Getting to know some Modules|Getting to know some Modules]]
+### [[Q3 Quick Overview of some of the Modules|Quick Overview of some of the Modules]]
 
 ---
 ## Modules
 
-**Detailed information about the modules included in the Unity Prototyping Toolkit.**:
+**Detailed information about the modules included in the Prototyping Toolkit.**:
 ### [[Q4 List of Modules|List of Modules]]
 
-The Unity Prototyping Toolkit encompasses a range of modules designed to address specific development needs. Explore the documentation to learn more about each module and how it can contribute to your prototyping journey.
+This Unity Prototyping Toolkit encompasses a range of modules designed to address specific development needs. Explore the documentation to learn more about each module and how it can contribute to your prototyping journey.
 
-Whether you're a solo developer, part of a team, or just eager to experiment with game ideas, the Unity Prototyping Toolkit is here to help you bring your visions to life. Let's dive in and explore the features and functionalities that await you!
+Whether you're a solo developer, part of a team, or just eager to experiment with game ideas, the Prototyping Toolkit is here to help you bring your visions to life. Let's dive in and explore the features and functionalities that await you!
 
 ---
 ## Purpose of the Toolkit
