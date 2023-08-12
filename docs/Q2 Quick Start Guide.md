@@ -14,7 +14,7 @@ The Quick Start Guide tries to focus on the development by sticking to best prac
 -  a game controller with start-, game- and end-state and UI *(~ 40min)*
 -  audio options and some sounds *(~ 20min)*
 
-![[game-gif.mp4]]
+![[game-gif.gif]]
 
 ---
 ## Lets get started
