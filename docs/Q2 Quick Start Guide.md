@@ -1,64 +1,124 @@
 
-Everything done in this guide can be found in the Quick Start Guide Sample Folder.
-The Quick Start Guide tries to focus on the development by sticking to best practices, but at the same time to not over-engineer in an early stage.
+# Quick Start Guide
+
+Welcome to the Quick Start Guide for the Unity Prototyping Toolkit. In this guide, you'll find step-by-step instructions to help you get started with the toolkit's functionality. All the examples and resources mentioned here can be found in the Quick Start Guide Sample Folder.
+
+Our goal with the Quick Start Guide is to strike a balance between following best practices and avoiding unnecessary complexity during the early stages of development. We aim to empower you to efficiently create prototypes while maintaining a solid foundation for future enhancements.
+
+Let's dive into the guide and explore the features and workflows that the Unity Prototyping Toolkit offers.
 
 ---
-#### What are we going to implement in this guide (time ~2h)
-	(needed to have a simple loop)
--  a simple player with planar movement and an isometric camera view *(~ 20min)*
--  a player health controller with damage event and UI Feedback *(~ 40min)*
--  spawning some enemies that move towards and pass the player *(~ 50min)*
-#### Bonus implementations (time ~2h)
-	(needed for better testing and iterating)
--  a skill to deal damage to enemies around the player with UI feedback *(~ 30min)*
--  a game controller with start-, game- and end-state and UI *(~ 40min)*
--  audio options and some sounds *(~ 20min)*
+---
+### What We're Implementing in This Guide (Estimated Time: ~2 hours)
+
+	In this section, we'll outline the key components we'll be working on during the course of this guide. These implementations are essential to creating a simple game loop.
+
+1. **Simple Player and Camera Setup** _(Approx. 20 minutes)_
+    - Create a basic player character with planar movement controls.
+    - Set up an isometric camera view to provide a suitable perspective.
+2. **Player Health Control and UI Feedback** _(Approx. 40 minutes)_
+    - Implement a player health controller that triggers damage events.
+    - Integrate UI feedback to reflect changes in player health.
+3. **Enemy Spawning and Movement** _(Approx. 50 minutes)_
+    - Develop an enemy spawning system that generates enemies around the player.
+    - Configure enemies to move towards the player and pass them.
+
+### Bonus Implementations (Estimated Time: ~2 hours)
+
+	These additional implementations are beneficial for enhanced testing and iteration of your prototype.
+
+1. **Player Skill for Dealing Damage** _(Approx. 30 minutes)_
+    - Introduce a skill that allows the player to deal damage to enemies in proximity.
+    - Provide UI feedback to indicate the skill's activation and effect.
+2. **Game Controller with States and UI** _(Approx. 40 minutes)_
+    - Create a game controller to manage different game states (start, game, end).
+    - Design UI elements to convey game state transitions effectively.
+3. **Audio Options and Sound Effects** _(Approx. 20 minutes)_
+    - Incorporate audio options to control sound settings.
+    - Implement relevant sound effects to enhance the game experience.
+
+Feel free to refer to the accompanying video showcasing the finished game. Let's start building your prototype step by step!
 
 ![[game-gif.mp4]]
 
 ---
-## Lets get started
+---
+### Lets get started
 
-##### 0. Setup
+#### 1. Initial Setup
 
-- for the purpose of this guide we create a ScriptableObject called GameData, which holds all the relevant variables and events and other references that are shared between features for this prototype
+In this section, we'll set up the foundational elements needed for your prototype. We'll create a `ScriptableObject` named `GameData` to manage shared variables, events, and references between different features of the prototype. This can only be done since this will be a single player game, the approach for a multiplayer game would be different.
+
+**Creating the GameData ScriptableObject**
+To centralize essential data and references, follow these steps:
+a. Create a new C# script named `GameData` and attach it to a new `ScriptableObject`.
 ```csharp
+using UnityEngine;
+
 [CreateAssetMenu(fileName = "GameData", menuName = "GameData")]
 public class GameData : ScriptableObject  
 {
 
 }
 ```
-- We can remove the CreateAssetMenu after we created an asset in the project, because we only need one GameData asset.
-- Almost every script we write will have a reference to this GameData
--  We also need to create a new Scene
+b. You can remove the `CreateAssetMenu` attribute once the `GameData` asset is created since only one instance is needed.
 
-##### 1. Player, Movement and Camera
+**Using GameData References**
+In your project's scripts, you'll frequently reference the `GameData` to access shared data.
 
--  for that we can use our sample player, but its also possible to use your own character controller
-	-  drag and drop the isometric camera prefab from PrototypingToolkit/Cameras/IsometricCamera into your player
-	-  adjust the target of the camera, so that it sits at the right position of your character
-	-  adjust cinemachine settings as you like
--  set up an InputActionMap with WASD for the movement
--  for the settings of the player we create some [[Variables]] like currentSpeed and maxSpeed
-	-  right-click in the project Create/PrototypingToolkit/Variables/FloatVariable and call it properly
-	-  reference it in the GameData and access it with Get() and Set(value)
--  give the player a ground that moves with it
--  make sure your player has a collider for later steps and that the tag is set to "Player"
+**Creating a New Scene**
+Start your prototype with a clean slate. Create a new scene and name it according to your preference.
 
-Your project, scene and player should look something like this by now:
+With the initial setup in place, we're ready to begin building the individual components of this prototype. Let's move on to the next steps!
+
+---
+#### 2. Player, Movement and Camera Setup
+
+In this section, we'll work on setting up the player's character movement and camera functionality. You can either use the provided sample player or integrate your own character controller, depending on your preference.
+
+**Integrating the Isometric Camera**
+Follow these steps to integrate the isometric camera into your player character:
+
+1. Drag and drop the isometric camera prefab from `PrototypingToolkit/Cameras/IsometricCamera` into your player's hierarchy.
+2. Adjust the camera's target to ensure it's positioned correctly in relation to your character.
+3. Customize Cinemachine settings as needed to achieve your desired camera behavior.
+
+**Setting Up Input Controls**
+To enable player movement, you'll need to create an `InputActionMap` with WASD bindings for movement controls.
+
+**Creating Player Settings**
+For player settings, consider creating [[Variables]] such as `currentSpeed` and `maxSpeed` for more flexible adjustments:
+
+1. Right-click in your project, navigate to `Create/PrototypingToolkit/Variables/FloatVariable`, and name it appropriately.
+2. Reference the created variable in your `GameData` script. You can access its value using `Get()` and set it using `Set(value)`.
+
+**Moving Ground Integration**
+Ensure that your player has a collider component for future steps and that its tag is set to "Player". Implement a ground that moves along with the player's character.
+
+At this point, your project, scene, and player should resemble the setup shown below:
 ![[Pasted image 20230812103858.png]]
 
-##### 2. Player Health Controller with damage event
+With the player, movement controls, and camera setup in place, we're making great progress. Let's move on to the next steps!
 
-- first we need to create another [[Variables|FloatVariable]] like movementSpeed and call it "PlayerHealth_FloatVariable" and set the startValue to 100
-- then we add a hud canvas with two simple images
-	- one as background in dark
-	- and one as the player health bar in red and set the Image Type to "Filled"
-- then we also create a HealthBarUIController that will hold the GameData and will set the fill of the image when the player health is changed
-- for that we need to create an EmptyEvent
-	- right-click in the project Create/PrototypingToolkit/Events/EmptyEvent
-	- call it "PlayerHealthChanged_EmptyEvent" and add it to the "PlayerHealth_FloatVariable"
+---
+##### 3. Player Health Controller with Damage Event
+
+In this section, we'll implement a player health system that responds to damage events and provides UI feedback for the player's health status.
+
+**Setting Up Player Health Variables**
+To create a health system, start by setting up a [[Variables|FloatVariable]] named `PlayerHealth_FloatVariable` with a start value of 100. This variable will track the player's health throughout the game.
+
+**Creating Health Bar UI**
+
+1. Add a hud canvas to your scene and include two simple images:
+    - One as the background in a dark color.
+    - Another for the player's health bar, set to red with the Image Type set to "Filled."
+
+**Implementing HealthBarUIController**
+The `HealthBarUIController` script is crucial for updating the health bar UI in response to player health changes. To set this up:
+
+1. Create an EmptyEvent by right-clicking in the project and selecting `Create/PrototypingToolkit/Events/EmptyEvent.` Name it `PlayerHealthChanged_EmptyEvent` and attach it to the `PlayerHealth_FloatVariable.`
+2. Implement the `HealthBarUIController` script as follows:
 ```csharp
 public class HealthBarUIController : MonoBehaviour  
 {  
@@ -94,7 +154,9 @@ public class HealthBarUIController : MonoBehaviour
 }
 ```
 
-- For the player to take damage we add an OnTriggerEnter method to the collider of the player and raise a "DealDamageToPlayer_EmptyEvent"
+
+**Introducing Player Damage Interaction**
+Simulating player damage involves adding an `OnTriggerEnter` method to the player's collider. This method raises the `DealDamageToPlayer_EmptyEvent` when a triggering object enters:
 ```csharp
 public class Damageable : MonoBehaviour  
 {  
@@ -110,9 +172,10 @@ public class Damageable : MonoBehaviour
 }
 ```
 
-- and than we add a HealthController to the player which handles the "DealDamageToPlayer_EmptyEvent"
-	-  subtracts the damage amount from the players health
-	-  and send an event if the player has no health (GameOver_EmptyEvent)
+**Implementing the Health Controller**
+The `HealthController` script manages player health manipulation and triggers the game over event. It performs the following:
+- Subtracts the specified damage amount from the player's health.
+- Sends a `gameOver_EmptyEvent` if the player's health reaches zero or lower.
 ```csharp
 public class HealthController : MonoBehaviour  
 {  
@@ -131,17 +194,14 @@ public class HealthController : MonoBehaviour
   
     private void OnDamageToPlayer()  
     {  
-        gameData.PlayerCurrentHealth.AddToCurrent(- 10); 
-  
-        if (gameData.PlayerCurrentHealth.Get() <= 0)  
-        {  
-            gameData.GameOver.Raise();  
-        }  
+        gameData.PlayerCurrentHealth.AddToCurrent( -10 );  
     }  
 }
 ```
+Later on we will introduce a FloatVariable for the damage amount.
 
-- for testing purposes we add a button the GameData to see if everything is working at runtime
+**Testing the Health System**
+For testing purposes, a button method has been added to `GameData` to simulate player damage during runtime:
 ```csharp
 [ButtonMethod]  
 private void DamagePlayerTest()  
@@ -150,35 +210,38 @@ private void DamagePlayerTest()
 }
 ```
 
+With the player health controller and damage events set up, your game prototype is becoming more interactive and engaging. In the next section, we'll delve into enemy spawning and interactions to further enhance the game loop.
+
+---
 ##### 3. Enemies and EnemySpawner
 
-- for the enemies we copy the model and collider of the player and create a new prefab with new material colors
-	- we create some [[Variables]] for the enemy like movementSpeed and damage
-	- and we let the enemies walk towards and pass the player in its Update method
-	- we also need the initialPlayerPosition for that 
-		- we can do this by adding the Player Transform to the GameData on the players Awake and access it in the enemies OnEnable
-		  (this way enemies will not directly reference the player)
+For the enemies we copy the model and collider of the player and create a new prefab with new material colors
+- we create some [[Variables]] for the enemy like movementSpeed and damage
+- and we let the enemies walk towards and pass the player in its Update method
+- we also need the initialPlayerPosition for that 
+	- we can do this by adding the Player Transform to the GameData on the players Awake and access it in the enemies OnEnable
+	  (this way enemies will not directly reference the player)
 
-- now lets create the EnemySpawner which will sit inside the player
-	- for that we create some new [[Variables]] like spawnRadius, deSpawnRadius and spawnRate
-		-  deSpawnRadius should be bigger than spawnRadius
-	- than we create enemies at a random position based on the spawnRadius during a coroutine based on the spawnRate
-	- we add a collider that will handle the despawning in OnTriggerExit
-	- **important:** since the spawner is part of the player it also needs to have the "Player" tag
+Now lets create the EnemySpawner which will sit inside the player
+- for that we create some new [[Variables]] like spawnRadius, deSpawnRadius and spawnRate
+	-  deSpawnRadius should be bigger than spawnRadius
+- than we create enemies at a random position based on the spawnRadius during a coroutine based on the spawnRate
+- we add a collider that will handle the despawning in OnTriggerExit
+- **important:** since the spawner is part of the player it also needs to have the "Player" tag
 
-And that is it for the basic loop, the game is now playable.
+*And that is it for the basic loop, the game is now playable.*
 
 ---
 ## Lets add more
 
 ##### 1. A skill to deal damage to enemies with UI feedback
 
--  for this we create a new prefab that sits inside the player
-	- it need a Rigidbody (because it handles its own collisions with the enemies) and the "Player" tag so that it does not collide with the player
-	- it needs a collider in a child and some sort of visual in our case its a sprite on the ground
-		- the collider will destroy enemies in OnTriggerEnter
-	- we also need a new inputAction to use the skill, so it needs to be added to the InputActionMap
-	- and we add some [[Variables]] to the GameData for settings like coolDown and curCoolDown
+For this we create a new prefab that sits inside the player
+- it need a Rigidbody (because it handles its own collisions with the enemies) and the "Player" tag so that it does not collide with the player
+- it needs a collider in a child and some sort of visual in our case its a sprite on the ground
+	- the collider will destroy enemies in OnTriggerEnter
+- we also need a new inputAction to use the skill, so it needs to be added to the InputActionMap
+- and we add some [[Variables]] to the GameData for settings like coolDown and curCoolDown
 It could look like this:
 ```csharp
 public class DamageSkillController : MonoBehaviour  
@@ -251,20 +314,22 @@ public class DamageSkillController : MonoBehaviour
 }
 ```
 
-- next we need another filled image in our hud that will indicate weather our skill is on coolDown or not
-	- for that we check in the Update method if the curCoolDown is lower or the same as the coolDown and set the fillAmount respectively
+Next we need another filled image in our hud that will indicate weather our skill is on coolDown or not
+- for that we check in the Update method if the curCoolDown is lower or the same as the coolDown and set the fillAmount respectively
 ##### 2. GameController with UI
 
-- for this we need a GameController inheriting form [[State Logic#3. Create a new StateMachine|StateMachine]]
-	- it need the StartState GameState and EndState
-	- will instantiate them initialize with the StartState and will then react to events in order to trigger state transitions
-	- it will hold all the necessary scene references in order to give them to the states
-	- these states will than handle logic in their Enter and Exit methods in order to represent the state properly
-- we also need two new canvases
-	- a start canvas which will have some Information about the rules and a start button
-	- a end canvas with a restart button
-	- the buttons will trigger events which will be handled by the GameController
-- we also need a container for the enemies that can be cleared on state transitions
+For this we need a GameController inheriting form [[State Logic#3. Create a new StateMachine|StateMachine]]
+- it need the StartState GameState and EndState
+- will instantiate them initialize with the StartState and will then react to events in order to trigger state transitions
+- it will hold all the necessary scene references in order to give them to the states
+- these states will than handle logic in their Enter and Exit methods in order to represent the state properly
+
+We also need two new canvases
+- a start canvas which will have some Information about the rules and a start button
+- a end canvas with a restart button
+- the buttons will trigger events which will be handled by the GameController
+
+We also need a container for the enemies that can be cleared on state transitions
 The GameController could look like this:
 ```csharp
 [DefaultExecutionOrder(-10)]  
@@ -326,54 +391,54 @@ public class GameController : StateMachine
 
 ##### 3. Sounds and audio options
 
-- for that we to get some Sounds
-	- we can take some free sounds from [Kenny](https://www.kenney.nl/assets/impact-sounds)
-	- we create a sound for
-		- the start button
-		- the dealDamageToPlayer event 
-		- for the skill
-		- and for game over
-	- for that we need three things
-		- Add an AudioManager to your scene
-			- PrototypingToolkit/Audio/Prefabs/AudioManager
-			- also right-click in the hierarchy under PrototypingToolkit/AudioManager
-		- create [[Audio Event Data]] for each Sound
-			- set the corresponding mixer group
-			- add the audio files to the Audio Clips List
-			- adjust Volume and pitch
-		- there a two ways to raise audio events with audio event data
-			- either in the [[Audio Event Data#3b. Raise Audio Events via Inspector|inspector]] with unity events and the [[Audio Data#Play AudioEvent|Play AudioEvent]]
-			- or via code by referencing the audio event data, raising it and sending the sound with it
-	- as an example we can create an empty GameObject add a EmptyEventListener and react to the "DealDamageToPlayer_EmptyEvent" and add the [[Audio Data#Play AudioEvent|Play AudioEvent]] and our created [[Audio Event Data]] with the corresponding sound(s)![[Pasted image 20230812175748.png]]
-	- a more convenient way would be to raise them where they happen (for example in the HealthController)
-	```csharp
-	private void OnDamageToPlayer()  
+For that we to get some Sounds. We can take some free sounds from [Kenny](https://www.kenney.nl/assets/impact-sounds)
+Lets add some sounds for the start button, the dealDamageToPlayer event, the skill and for game over.
+First lets add an AudioManager to your scene
+- PrototypingToolkit/Audio/Prefabs/AudioManager
+- also right-click in the hierarchy under PrototypingToolkit/AudioManager
+
+Ceate [[Audio Event Data]] for each Sound
+- set the corresponding mixer group
+- add the audio files to the Audio Clips List
+- adjust Volume and pitch
+
+There a two ways to raise audio events with audio event data
+- either in the [[Audio Event Data#3b. Raise Audio Events via Inspector|inspector]] with unity events and the [[Audio Data#Play AudioEvent|Play AudioEvent]]
+- or via code by referencing the audio event data, raising it and sending the sound with it
+
+As an example we can create an empty GameObject add a EmptyEventListener and react to the "DealDamageToPlayer_EmptyEvent" and add the [[Audio Data#Play AudioEvent|Play AudioEvent]] and our created [[Audio Event Data]] with the corresponding sound(s)![[Pasted image 20230812175748.png]]
+
+A more convenient way would be to raise them where they happen (for example in the HealthController)
+```csharp
+private void OnDamageToPlayer()  
+{  
+	gameData.PlayerHealth.AddToCurrent(-gameData.EnemyDamage.Get());  
+	gameData.AudioData.PlayAudioEvent.Raise(gameData.BumpSound);  
+
+	if (gameData.PlayerHealth.Get() <= 0)  
 	{  
-	    gameData.PlayerHealth.AddToCurrent(-gameData.EnemyDamage.Get());  
-	    gameData.AudioData.PlayAudioEvent.Raise(gameData.BumpSound);  
-  
-	    if (gameData.PlayerHealth.Get() <= 0)  
-	    {  
-	        gameData.GameOver.Raise();  
-	        gameData.AudioData.PlayAudioEvent.Raise(gameData.GameOverSound);  
-	    }  
-	}
-	```
+		gameData.GameOver.Raise();  
+		gameData.AudioData.PlayAudioEvent.Raise(gameData.GameOverSound);  
+	}  
+}
+```
 
-- another thing we need to do is add a Audio Options 
-	- for that we need two things
-	- we need to add an Audio_slider to our start canvas
-		- PrototypingToolkit/Options/Audio/Prefabs/Audio_Slider
-		- reference the Sound_VolumeFloatVariable
-	- and we have to add the AudioSettingsManager to our scene
-		- PrototypingToolkit/Audio/Prefabs/AudioSettingsManager
-		- also right-click in the hierarchy under PrototypingToolkit/AudioSettingsManager
+Another thing we need to do is add some Audio Options 
+For that we need two things:
 
-And that is it now we have a prototype on which we can iterate on.
+We need to add an Audio_slider to our start canvas
+- PrototypingToolkit/Options/Audio/Prefabs/Audio_Slider
+- reference the Sound_VolumeFloatVariable
+
+And we have to add the AudioSettingsManager to our scene
+- PrototypingToolkit/Audio/Prefabs/AudioSettingsManager
+- also right-click in the hierarchy under PrototypingToolkit/AudioSettingsManager
+
+*And that is it now we have a prototype on which we can iterate on.*
 
 ---
 ##### Now its your turn:
-	add some extras to learn more about PTK, and improve your playtesting environment:
+	Add some extras to learn more about PTK, and improve your playtesting environment:
 -  Add a timer and an indicator that shows how many enemies you have surpassed
 -  Add an Input rebind menu for the player controls
 -  Add another skill (a dash perhaps)
