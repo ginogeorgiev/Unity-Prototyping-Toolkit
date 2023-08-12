@@ -14,7 +14,7 @@ The Quick Start Guide tries to focus on the development by sticking to best prac
 -  a game controller with start-, game- and end-state and UI *(~ 40min)*
 -  audio options and some sounds *(~ 20min)*
 
-![[game-gif.gif]]
+![[game-gif.mp4]]
 
 ---
 ## Lets get started
@@ -31,7 +31,6 @@ public class GameData : ScriptableObject
 ```
 - We can remove the CreateAssetMenu after we created an asset in the project, because we only need one GameData asset.
 - Almost every script we write will have a reference to this GameData
-
 -  We also need to create a new Scene
 
 ##### 1. Player, Movement and Camera
@@ -57,7 +56,9 @@ Your project, scene and player should look something like this by now:
 	- one as background in dark
 	- and one as the player health bar in red and set the Image Type to "Filled"
 - then we also create a HealthBarUIController that will hold the GameData and will set the fill of the image when the player health is changed
-- for that we need to create an EmptyEvent "PlayerHealthChanged_EmptyEvent" and add it to the "PlayerHealth_FloatVariable"
+- for that we need to create an EmptyEvent
+	- right-click in the project Create/PrototypingToolkit/Events/EmptyEvent
+	- call it "PlayerHealthChanged_EmptyEvent" and add it to the "PlayerHealth_FloatVariable"
 ```csharp
 public class HealthBarUIController : MonoBehaviour  
 {  
@@ -170,7 +171,205 @@ And that is it for the basic loop, the game is now playable.
 ---
 ## Lets add more
 
+##### 1. A skill to deal damage to enemies with UI feedback
 
+-  for this we create a new prefab that sits inside the player
+	- it need a Rigidbody (because it handles its own collisions with the enemies) and the "Player" tag so that it does not collide with the player
+	- it needs a collider in a child and some sort of visual in our case its a sprite on the ground
+		- the collider will destroy enemies in OnTriggerEnter
+	- we also need a new inputAction to use the skill, so it needs to be added to the InputActionMap
+	- and we add some [[Variables]] to the GameData for settings like coolDown and curCoolDown
+It could look like this:
+```csharp
+public class DamageSkillController : MonoBehaviour  
+{  
+   [Header("Data")]  
+   [SerializeField] private GameData gameData;  
+     
+   [Header("Internal Ref")]  
+   [SerializeField] private GameObject damageCollider;  
+     
+   [Header("Debug")]  
+   [SerializeField] private bool isPressed;  
+  
+   private void OnEnable()  
+   {  
+      gameData.SkillInput.action.Enable();  
+        
+      gameData.SkillInput.action.started += OnSkillInput;  
+      gameData.SkillInput.action.canceled += OnSkillInput;  
+  
+      damageCollider.SetActive(false);  
+   }  
+  
+   private void OnDisable()  
+   {  
+      gameData.SkillInput.action.started -= OnSkillInput;  
+      gameData.SkillInput.action.canceled -= OnSkillInput;  
+        
+      gameData.SkillInput.action.Disable();  
+   }  
+     
+   private void OnSkillInput(InputAction.CallbackContext context)  
+   {  
+      isPressed = context.started;  
+   }  
+  
+   private void Update()  
+   {  
+      if (gameData.CurCoolDown.Get() > 0)  
+      {  
+         gameData.CurCoolDown.AddToCurrent(- Time.deltaTime);  
+      }  
+      else if (isPressed)  
+      {  
+         DoSkill();  
+      }  
+   }  
+  
+   private void DoSkill()  
+   {  
+      if (!(gameData.CurCoolDown.Get() <= 0)) return;  
+  
+      StartCoroutine(DealDamage());  
+   }  
+  
+   private IEnumerator DealDamage()  
+   {  
+      damageCollider.SetActive(true);  
+      RefreshCoolDown();  
+  
+      yield return new WaitForSeconds(gameData.SkillActiveTime.Get());  
+        
+      damageCollider.SetActive(false);  
+   }  
+  
+   private void RefreshCoolDown()  
+   {  
+      gameData.CurCoolDown.Set(gameData.SkillCoolDown.Get());  
+   }  
+}
+```
+
+- next we need another filled image in our hud that will indicate weather our skill is on coolDown or not
+	- for that we check in the Update method if the curCoolDown is lower or the same as the coolDown and set the fillAmount respectively
+##### 2. GameController with UI
+
+- for this we need a GameController inheriting form [[State Logic#3. Create a new StateMachine|StateMachine]]
+	- it need the StartState GameState and EndState
+	- will instantiate them initialize with the StartState and will then react to events in order to trigger state transitions
+	- it will hold all the necessary scene references in order to give them to the states
+	- these states will than handle logic in their Enter and Exit methods in order to represent the state properly
+- we also need two new canvases
+	- a start canvas which will have some Information about the rules and a start button
+	- a end canvas with a restart button
+	- the buttons will trigger events which will be handled by the GameController
+- we also need a container for the enemies that can be cleared on state transitions
+The GameController could look like this:
+```csharp
+[DefaultExecutionOrder(-10)]  
+public class GameController : StateMachine  
+{  
+   [Header("Data")]  
+   [SerializeField] private GameData gameData;  
+     
+   [Header("Scene Refs")]  
+   [SerializeField] private GameObject player;  
+   [SerializeField] private EnemyContainerController enemyContainerController;  
+     
+   [SerializeField] private GameObject hud;  
+   [SerializeField] private GameObject startScreen;  
+   [SerializeField] private GameObject endScreen;  
+  
+   private StartState startState;  
+   private GameState gameState;  
+   private EndState endState;  
+     
+   private void Awake()  
+   {  
+      player.SetActive(false);  
+      enemyContainerController.gameObject.SetActive(false);  
+      hud.SetActive(false);  
+      endScreen.SetActive(false);  
+        
+      gameData.ReStart.Register(EnterStartState);  
+      gameData.GameStart.Register(EnterGameState);  
+      gameData.GameOver.Register(EnterEndState);  
+  
+      startState = new StartState(gameData, startScreen);  
+      gameState = new GameState(gameData, player,
+							      enemyContainerController, hud, startScreen);  
+      endState = new EndState(gameData, endScreen);  
+        
+      Initialize(startState);  
+   }  
+     
+   [ButtonMethod]  
+   private void EnterStartState()  
+   {  
+      if (currentStateSO.Get() is not StartState) TransitionTo(startState);  
+   }  
+  
+   [ButtonMethod]  
+   private void EnterGameState()  
+   {  
+      if (currentStateSO.Get() is not GameState) TransitionTo(gameState);  
+   }  
+  
+   [ButtonMethod]  
+   private void EnterEndState()  
+   {  
+      if (currentStateSO.Get() is not EndState) TransitionTo(endState);  
+   }  
+}
+```
+
+##### 3. Sounds and audio options
+
+- for that we to get some Sounds
+	- we can take some free sounds from [Kenny](https://www.kenney.nl/assets/impact-sounds)
+	- we create a sound for
+		- the start button
+		- the dealDamageToPlayer event 
+		- for the skill
+		- and for game over
+	- for that we need three things
+		- Add an AudioManager to your scene
+			- PrototypingToolkit/Audio/Prefabs/AudioManager
+			- also right-click in the hierarchy under PrototypingToolkit/AudioManager
+		- create [[Audio Event Data]] for each Sound
+			- set the corresponding mixer group
+			- add the audio files to the Audio Clips List
+			- adjust Volume and pitch
+		- there a two ways to raise audio events with audio event data
+			- either in the [[Audio Event Data#3b. Raise Audio Events via Inspector|inspector]] with unity events and the [[Audio Data#Play AudioEvent|Play AudioEvent]]
+			- or via code by referencing the audio event data, raising it and sending the sound with it
+	- as an example we can create an empty GameObject add a EmptyEventListener and react to the "DealDamageToPlayer_EmptyEvent" and add the [[Audio Data#Play AudioEvent|Play AudioEvent]] and our created [[Audio Event Data]] with the corresponding sound(s)![[Pasted image 20230812175748.png]]
+	- a more convenient way would be to raise them where they happen (for example in the HealthController)
+	```csharp
+	private void OnDamageToPlayer()  
+	{  
+	    gameData.PlayerHealth.AddToCurrent(-gameData.EnemyDamage.Get());  
+	    gameData.AudioData.PlayAudioEvent.Raise(gameData.BumpSound);  
+  
+	    if (gameData.PlayerHealth.Get() <= 0)  
+	    {  
+	        gameData.GameOver.Raise();  
+	        gameData.AudioData.PlayAudioEvent.Raise(gameData.GameOverSound);  
+	    }  
+	}
+	```
+
+- another thing we need to do is add a Audio Options 
+	- for that we need two things
+	- we need to add an Audio_slider to our start canvas
+		- PrototypingToolkit/Options/Audio/Prefabs/Audio_Slider
+		- reference the Sound_VolumeFloatVariable
+	- and we have to add the AudioSettingsManager to our scene
+		- PrototypingToolkit/Audio/Prefabs/AudioSettingsManager
+		- also right-click in the hierarchy under PrototypingToolkit/AudioSettingsManager
+
+And that is it now we have a prototype on which we can iterate on.
 
 ---
 ##### Now its your turn:
