@@ -51,10 +51,11 @@ Feel free to refer to the accompanying video showcasing the finished game. Let's
 
 #### 1. Initial Setup
 
-In this section, we'll set up the foundational elements needed for your prototype. We'll create a `ScriptableObject` named `GameData` to manage shared variables, events, and references between different features of the prototype. This can only be done since this will be a single player game, the approach for a multiplayer game could be different.
+In this section, we'll set up the foundational elements needed for this prototype. We'll create a `ScriptableObject` named `GameData` to manage shared variables, events, and references between different features of the prototype. This can be done since this will be a single player game. The approach for a multiplayer game could be different.
 
 **Creating the GameData ScriptableObject**
 To centralize essential data and references, follow these steps:
+
 1. Create a new C# script named `GameData` and attach it to a new `ScriptableObject`.
 ```csharp
 using UnityEngine;
@@ -97,7 +98,7 @@ For player settings, consider creating [[Variables]] such as `currentSpeed` and 
 2. Reference the created variable in your `GameData` script. You can access its value using `Get()` and set it using `Set(value)`.
 
 **Moving Ground Integration**
-Ensure that your player has a collider component for future steps and that its tag is set to "Player". Implement a ground that moves along with the player's character.
+Ensure that your player has a collider component for future steps and that its tag is set to "Player". Implement a ground that moves along with the player's character. You can also remove the collider from the ground since we are not going to work with physics for now.
 
 At this point, your project, scene, and player should resemble the setup shown below:
 ![[Pasted image 20230812103858.png]]
@@ -158,7 +159,6 @@ public class HealthBarUIController : MonoBehaviour
 }
 ```
 
-
 **Introducing Player Damage Interaction**
 Simulating player damage involves adding an `OnTriggerEnter` method to the player's collider. This method raises the `DealDamageToPlayer_EmptyEvent` when a triggering object enters:
 ```csharp
@@ -177,9 +177,8 @@ public class Damageable : MonoBehaviour
 ```
 
 **Implementing the Health Controller**
-The `HealthController` script manages player health manipulation and triggers the game over event. It performs the following:
+The `HealthController` script manages player health manipulation. It performs the following:
 - Subtracts the specified damage amount from the player's health.
-- Sends a `gameOver_EmptyEvent` if the player's health reaches zero or lower.
 ```csharp
 public class HealthController : MonoBehaviour  
 {  
@@ -219,21 +218,29 @@ With the player health controller and damage events set up, your game prototype 
 ---
 ##### 3. Enemies and EnemySpawner
 
-For the enemies we copy the model and collider of the player and create a new prefab with new material colors
-- we create some [[Variables]] for the enemy like movementSpeed and damage
-- and we let the enemies walk towards and pass the player in its Update method
-- we also need the initialPlayerPosition for that 
-	- we can do this by adding the Player Transform to the GameData on the players Awake and access it in the enemies OnEnable
-	  (this way enemies will not directly reference the player)
+To introduce enemies into your game loop, follow these steps:
 
-Now lets create the EnemySpawner which will sit inside the player
-- for that we create some new [[Variables]] like spawnRadius, deSpawnRadius and spawnRate
-	-  deSpawnRadius should be bigger than spawnRadius
-- than we create enemies at a random position based on the spawnRadius during a coroutine based on the spawnRate
-- we add a collider that will handle the despawning in OnTriggerExit
-- **important:** since the spawner is part of the player it also needs to have the "Player" tag
+**Creating the Enemy Prefab**
 
-*And that is it for the basic loop, the game is now playable.*
+1. Create a new model with a collider, similar to the player's setup.
+2. Design the enemy with distinct materials and colors to differentiate it from the player.
+3. Establish essential [[Variables]] for the enemy, such as `movementSpeed` and `damage`. The damage value can now be integrated into the player's `HealthController`.
+
+**Enemy Movement Towards the Player**
+
+1. Implement the enemy's movement logic to make them walk towards and pass the player. Utilize the `Update` method for this behavior.
+2. To avoid direct player references in the enemy scripts, add the Player Transform to the `GameData` during the player's `Awake` method. This way, the enemies can access the player's position in `OnEnable` via the `GameData` without direct coupling.
+
+**Creating the EnemySpawner**
+
+1. Construct an EnemySpawner GameObject nested within the player to facilitate enemy spawning.
+2. Define necessary [[Variables]] within the EnemySpawner for `spawnRadius`, `deSpawnRadius`, and `spawnRate`.
+    - Ensure that the `deSpawnRadius` value exceeds the `spawnRadius` to enable proper despawning behavior.
+3. Develop a coroutine within the EnemySpawner that generates enemies at random positions within the specified `spawnRadius`. Control the spawning rate using the `spawnRate` variable.
+4. Attach a collider component to the EnemySpawner GameObject and implement `OnTriggerExit`. This function will handle enemy despawning when they move beyond the `deSpawnRadius`.
+5. **Note:** The EnemySpawner, being part of the player, should also be tagged with "Player" to ensure consistent behavior.
+
+*With these steps completed, you've successfully established the basic game loop. The game is now playable, and enemies are actively engaging with the player. The subsequent sections will delve into adding more features and enhancements to your prototype.*
 
 ---
 ## Lets add more
