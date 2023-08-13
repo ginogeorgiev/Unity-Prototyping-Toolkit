@@ -16,7 +16,7 @@ You can also [[Create your own typed EmptyEvent]] if needed.
 
 #### 3. Set Up the Event
 
--  Choose a [[Feature Domain]] if needed
+-  Choose a [[Domain Logic]] if needed
 
 ![[Pasted image 20230706113219.png]]
 

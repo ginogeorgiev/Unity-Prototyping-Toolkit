@@ -1,3 +1,5 @@
+# Feature Domain
+
 Feature domains are here to help you categorize your ScriptableObjects into Domains.
 
 The only use case is the [[Event Hub]] for now.

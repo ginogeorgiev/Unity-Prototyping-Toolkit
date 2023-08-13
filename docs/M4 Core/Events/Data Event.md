@@ -13,7 +13,7 @@ See: [[Create your own typed DataEvent]]
 
 #### 3. Set Up the Event
 
--  Choose a [[Feature Domain]] if needed
+-  Choose a [[Domain Logic]] if needed
 
 ![[Pasted image 20230706113409.png]]
 

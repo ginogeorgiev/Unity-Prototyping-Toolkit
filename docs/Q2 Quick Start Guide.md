@@ -10,7 +10,7 @@ Let's dive into the guide and explore the features and workflows that the Unity 
 ---
 ### What We're Implementing in This Guide (Estimated Time: ~2 hours)
 
-	In this section, we'll outline the key components	we'll be working on during
+	In this section, we'll outline the key components we'll be working on during
 	the course of this guide. These implementations are essential to creating
 	a simple game loop.
 
@@ -24,7 +24,7 @@ Let's dive into the guide and explore the features and workflows that the Unity 
     - Develop an enemy spawning system that generates enemies around the player.
     - Configure enemies to move towards the player and pass them.
 
-### Bonus Implementations (Estimated Time: ~2 hours)
+### Bonus Implementations (Estimated Time: ~1.5 hours)
 
 	These additional implementations are beneficial for enhanced
 	testing and iteration of your prototype.

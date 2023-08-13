@@ -2,7 +2,7 @@ The EventHub serves as a central manager for events in your project. It allows y
 
 You can either create one EventHub for the whole game or multiple based an your needs.
 
-##### See also [[Feature Domain]] to create your own
+##### See also [[Domain Logic]] to create your own
 
 #### 1. Create an EventHub
 

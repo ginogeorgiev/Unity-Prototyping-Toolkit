@@ -22,7 +22,7 @@
 |  |  |
 | **Core** |  |
 | - [[Command Logic]] | Implemented pattern to use Commands |
-| - [[Domain Logic]] | To categorize events (later more) by features and make them loggable |
+| - [[Domain Logic]] | To categorize events (later more) by features and make them loggable and describable |
 | - Editor Tools |  |
 | - - Attributes |  |
 | - - - [[Better Tooltip]] | Indicates if a Tooltip is there in the inspector |
