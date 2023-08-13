@@ -7,6 +7,7 @@ Our goal with the Quick Start Guide is to strike a balance between following bes
 Let's dive into the guide and explore the features and workflows that the Unity Prototyping Toolkit offers.
 
 ---
+
 ---
 ### What We're Implementing in This Guide (Estimated Time: ~2 hours)
 
@@ -41,19 +42,20 @@ Let's dive into the guide and explore the features and workflows that the Unity 
 
 Feel free to refer to the accompanying video showcasing the finished game. Let's start building your prototype step by step!
 
-![[game-gif.mp4]]
+![[game-gif_AdobeExpress.gif]]
 
 ---
+
 ---
 ### Lets get started
 
 #### 1. Initial Setup
 
-In this section, we'll set up the foundational elements needed for your prototype. We'll create a `ScriptableObject` named `GameData` to manage shared variables, events, and references between different features of the prototype. This can only be done since this will be a single player game, the approach for a multiplayer game would be different.
+In this section, we'll set up the foundational elements needed for your prototype. We'll create a `ScriptableObject` named `GameData` to manage shared variables, events, and references between different features of the prototype. This can only be done since this will be a single player game, the approach for a multiplayer game could be different.
 
 **Creating the GameData ScriptableObject**
 To centralize essential data and references, follow these steps:
-a. Create a new C# script named `GameData` and attach it to a new `ScriptableObject`.
+1. Create a new C# script named `GameData` and attach it to a new `ScriptableObject`.
 ```csharp
 using UnityEngine;
 
@@ -63,7 +65,7 @@ public class GameData : ScriptableObject
 
 }
 ```
-b. You can remove the `CreateAssetMenu` attribute once the `GameData` asset is created since only one instance is needed.
+2. You can remove the `CreateAssetMenu` attribute once the `GameData` asset is created since only one instance is needed.
 
 **Using GameData References**
 In your project's scripts, you'll frequently reference the `GameData` to access shared data.
