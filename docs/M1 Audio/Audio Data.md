@@ -1,6 +1,6 @@
 Holds all the imported data related to audio
 
-Will be used by [[Audio Manager]] and [[Audio Options#Audio Settings Manager|Audio Settings Manager]]
+Will be used by [[Audio Manager]] and [[Audio Options#Audio Data Manager|Audio Data Manager]]
 Can also be used to have a reference to the [[Audio Data#Play AudioEvent|Play AudioEvent]] and the [[Audio Data#Stop AudioEvent|Stop AudioEvent]] or the audio variables to react to its changes. 
 
 ![[Pasted image 20230810092106.png]]

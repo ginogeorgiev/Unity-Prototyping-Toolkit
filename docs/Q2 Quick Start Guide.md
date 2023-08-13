@@ -432,9 +432,9 @@ We need to add an Audio_slider to our start canvas
 - PrototypingToolkit/Options/Audio/Prefabs/Audio_Slider
 - reference the Sound_VolumeFloatVariable
 
-And we have to add the AudioSettingsManager to our scene
-- PrototypingToolkit/Audio/Prefabs/AudioSettingsManager
-- also right-click in the hierarchy under PrototypingToolkit/AudioSettingsManager
+And we have to add the AudioDataManager to our scene
+- PrototypingToolkit/Audio/Prefabs/AudioDataManager
+- also right-click in the hierarchy under PrototypingToolkit/AudioDataManager
 
 *And that is it now we have a prototype on which we can iterate on.*
 
