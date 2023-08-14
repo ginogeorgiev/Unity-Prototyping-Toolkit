@@ -54,6 +54,7 @@ Feel free to refer to the accompanying video showcasing the finished game. Let's
 In this section, we'll set up the foundational elements needed for this prototype. We'll create a `ScriptableObject` named `GameData` to manage shared variables, events, and references between different features of the prototype. This can be done since this will be a single player game. The approach for a multiplayer game could be different.
 
 **Creating the GameData ScriptableObject**
+
 To centralize essential data and references, follow these steps:
 
 1. Create a new C# script named `GameData` and attach it to a new `ScriptableObject`.
@@ -69,9 +70,11 @@ public class GameData : ScriptableObject
 2. You can remove the `CreateAssetMenu` attribute once the `GameData` asset is created since only one instance is needed.
 
 **Using GameData References**
+
 In your project's scripts, you'll frequently reference the `GameData` to access shared data.
 
 **Creating a New Scene**
+
 Start your prototype with a clean slate. Create a new scene and name it according to your preference.
 
 With the initial setup in place, we're ready to begin building the individual components of this prototype. Let's move on to the next steps!
@@ -82,6 +85,7 @@ With the initial setup in place, we're ready to begin building the individual co
 In this section, we'll work on setting up the player's character movement and camera functionality. You can either use the provided sample player or integrate your own character controller, depending on your preference.
 
 **Integrating the Isometric Camera**
+
 Follow these steps to integrate the isometric camera into your player character:
 
 1. Drag and drop the isometric camera prefab from `PrototypingToolkit/Cameras/IsometricCamera` into your player's hierarchy.
@@ -89,9 +93,11 @@ Follow these steps to integrate the isometric camera into your player character:
 3. Customize Cinemachine settings as needed to achieve your desired camera behavior.
 
 **Setting Up Input Controls**
+
 To enable player movement, you'll need to create an `InputActionMap` with WASD bindings for movement controls.
 
 **Creating Player Settings**
+
 For player settings, consider creating [[Variables]] such as `currentSpeed` and `maxSpeed` for more flexible adjustments:
 
 1. Right-click in your project, navigate to `Create/PrototypingToolkit/Variables/FloatVariable`, and name it appropriately.
@@ -111,6 +117,7 @@ With the player, movement controls, and camera setup in place, we're making grea
 In this section, we'll implement a player health system that responds to damage events and provides UI feedback for the player's health status.
 
 **Setting Up Player Health Variables**
+
 To create a health system, start by setting up a [[Variables|FloatVariable]] named `PlayerHealth_FloatVariable` with a start value of 100. This variable will track the player's health throughout the game.
 
 **Creating Health Bar UI**
@@ -120,6 +127,7 @@ To create a health system, start by setting up a [[Variables|FloatVariable]] nam
     - Another for the player's health bar, set to red with the Image Type set to "Filled."
 
 **Implementing HealthBarUIController**
+
 The `HealthBarUIController` script is crucial for updating the health bar UI in response to player health changes. To set this up:
 
 1. Create an EmptyEvent by right-clicking in the project and selecting `Create/PrototypingToolkit/Events/EmptyEvent.` Name it `PlayerHealthChanged_EmptyEvent` and attach it to the `PlayerHealth_FloatVariable.`
@@ -160,6 +168,7 @@ public class HealthBarUIController : MonoBehaviour
 ```
 
 **Introducing Player Damage Interaction**
+
 Simulating player damage involves adding an `OnTriggerEnter` method to the player's collider. This method raises the `DealDamageToPlayer_EmptyEvent` when a triggering object enters:
 ```csharp
 public class Damageable : MonoBehaviour  
@@ -177,6 +186,7 @@ public class Damageable : MonoBehaviour
 ```
 
 **Implementing the Health Controller**
+
 The `HealthController` script manages player health manipulation. It performs the following:
 - Subtracts the specified damage amount from the player's health.
 ```csharp
@@ -204,6 +214,7 @@ public class HealthController : MonoBehaviour
 Later on we will introduce a FloatVariable for the damage amount.
 
 **Testing the Health System**
+
 For testing purposes, a button method has been added to `GameData` to simulate player damage during runtime:
 ```csharp
 [ButtonMethod]  
@@ -327,6 +338,7 @@ public class DamageSkillController : MonoBehaviour
 
 Next we need another filled image in our hud that will indicate weather our skill is on coolDown or not
 - for that we check in the Update method if the curCoolDown is lower or the same as the coolDown and set the fillAmount respectively
+
 ##### 2. GameController with UI
 
 For this we need a GameController inheriting form [[State Logic#3. Create a new StateMachine|StateMachine]]
