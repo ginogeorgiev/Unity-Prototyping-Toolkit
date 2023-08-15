@@ -11,8 +11,6 @@ Welcome to the Unity Prototyping Toolkit documentation. This toolkit is designed
 
 ### [[Q2 Quick Start Guide|Quick Start Guide]]
 
-### [[Q3 Quick Overview of some of the Modules|Quick Overview of some of the Modules]]
-
 ---
 ## Modules
 

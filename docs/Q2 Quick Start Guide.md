@@ -104,6 +104,7 @@ For player settings, consider creating [[Variables]] such as `currentSpeed` and 
 2. Reference the created variable in your `GameData` script. You can access its value using `Get()` and set it using `Set(value)`.
 
 **Moving Ground Integration**
+
 Ensure that your player has a collider component for future steps and that its tag is set to "Player". Implement a ground that moves along with the player's character. You can also remove the collider from the ground since we are not going to work with physics for now.
 
 At this point, your project, scene, and player should resemble the setup shown below:
@@ -464,6 +465,7 @@ And we have to add the AudioDataManager to our scene
 	Add some extras to learn more about PTK,
 	and improve your playtesting environment:
 -  Add a timer and an indicator that shows how many enemies you have surpassed
+-  Add more visuals to give better feedback for player movement
 -  Add an Input rebind menu for the player controls
 -  Add another skill (a dash perhaps)
 -  Add a progression which changes the enemy spawn rate over time
