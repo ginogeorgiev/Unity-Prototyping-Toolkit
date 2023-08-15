@@ -53,7 +53,7 @@ Feel free to refer to the accompanying video showcasing the finished game. Let's
 
 In this section, we'll set up the foundational elements needed for this prototype. We'll create a `ScriptableObject` named `GameData` to manage shared variables, events, and references between different features of the prototype. This can be done since this will be a single player game. The approach for a multiplayer game could be different.
 
-**Creating the GameData ScriptableObject**
+**1.1 Creating the GameData ScriptableObject**
 
 To centralize essential data and references, follow these steps:
 
@@ -69,11 +69,11 @@ public class GameData : ScriptableObject
 ```
 2. You can remove the `CreateAssetMenu` attribute once the `GameData` asset is created since only one instance is needed.
 
-**Using GameData References**
+**1.2 Using GameData References**
 
 In your project's scripts, you'll frequently reference the `GameData` to access shared data.
 
-**Creating a New Scene**
+**1.3 Creating a New Scene**
 
 Start your prototype with a clean slate. Create a new scene and name it according to your preference.
 
@@ -84,7 +84,7 @@ With the initial setup in place, we're ready to begin building the individual co
 
 In this section, we'll work on setting up the player's character movement and camera functionality. You can either use the provided sample player or integrate your own character controller, depending on your preference.
 
-**Integrating the Isometric Camera**
+**2.1 Integrating the Isometric Camera**
 
 Follow these steps to integrate the isometric camera into your player character:
 
@@ -92,18 +92,18 @@ Follow these steps to integrate the isometric camera into your player character:
 2. Adjust the camera's target to ensure it's positioned correctly in relation to your character.
 3. Customize Cinemachine settings as needed to achieve your desired camera behavior.
 
-**Setting Up Input Controls**
+**2.2 Setting Up Input Controls**
 
 To enable player movement, you'll need to create an `InputActionMap` with WASD bindings for movement controls.
 
-**Creating Player Settings**
+**2.3 Creating Player Settings**
 
 For player settings, consider creating [[Variables]] such as `currentSpeed` and `maxSpeed` for more flexible adjustments:
 
 1. Right-click in your project, navigate to `Create/PrototypingToolkit/Variables/FloatVariable`, and name it appropriately.
 2. Reference the created variable in your `GameData` script. You can access its value using `Get()` and set it using `Set(value)`.
 
-**Moving Ground Integration**
+**2.4 Moving Ground Integration**
 
 Ensure that your player has a collider component for future steps and that its tag is set to "Player". Implement a ground that moves along with the player's character. You can also remove the collider from the ground since we are not going to work with physics for now.
 
@@ -117,17 +117,17 @@ With the player, movement controls, and camera setup in place, we're making grea
 
 In this section, we'll implement a player health system that responds to damage events and provides UI feedback for the player's health status.
 
-**Setting Up Player Health Variables**
+**3.1 Setting Up Player Health Variables**
 
 To create a health system, start by setting up a [[Variables|FloatVariable]] named `PlayerHealth_FloatVariable` with a start value of 100. This variable will track the player's health throughout the game.
 
-**Creating Health Bar UI**
+**3.2 Creating Health Bar UI**
 
 1. Add a hud canvas to your scene and include two simple images:
     - One as the background in a dark color.
     - Another for the player's health bar, set to red with the Image Type set to "Filled."
 
-**Implementing HealthBarUIController**
+**3.3 Implementing HealthBarUIController**
 
 The `HealthBarUIController` script is crucial for updating the health bar UI in response to player health changes. To set this up:
 
@@ -168,7 +168,7 @@ public class HealthBarUIController : MonoBehaviour
 }
 ```
 
-**Introducing Player Damage Interaction**
+**3.4 Introducing Player Damage Interaction**
 
 Simulating player damage involves adding an `OnTriggerEnter` method to the player's collider. This method raises the `DealDamageToPlayer_EmptyEvent` when a triggering object enters:
 ```csharp
@@ -186,7 +186,7 @@ public class Damageable : MonoBehaviour
 }
 ```
 
-**Implementing the Health Controller**
+**3.5 Implementing the Health Controller**
 
 The `HealthController` script manages player health manipulation. It performs the following:
 - Subtracts the specified damage amount from the player's health.
@@ -214,7 +214,7 @@ public class HealthController : MonoBehaviour
 ```
 Later on we will introduce a FloatVariable for the damage amount.
 
-**Testing the Health System**
+**3.6 Testing the Health System**
 
 For testing purposes, a button method has been added to `GameData` to simulate player damage during runtime:
 ```csharp
@@ -228,22 +228,22 @@ private void DamagePlayerTest()
 With the player health controller and damage events set up, your game prototype is becoming more interactive and engaging. In the next section, we'll delve into enemy spawning and interactions to further enhance the game loop.
 
 ---
-##### 3. Enemies and EnemySpawner
+##### 4. Enemies and EnemySpawner
 
 To introduce enemies into your game loop, follow these steps:
 
-**Creating the Enemy Prefab**
+**4.1 Creating the Enemy Prefab**
 
 1. Create a new model with a collider, similar to the player's setup.
 2. Design the enemy with distinct materials and colors to differentiate it from the player.
 3. Establish essential [[Variables]] for the enemy, such as `movementSpeed` and `damage`. The damage value can now be integrated into the player's `HealthController`.
 
-**Enemy Movement Towards the Player**
+**4.2 Enemy Movement Towards the Player**
 
 1. Implement the enemy's movement logic to make them walk towards and pass the player. Utilize the `Update` method for this behavior.
 2. To avoid direct player references in the enemy scripts, add the Player Transform to the `GameData` during the player's `Awake` method. This way, the enemies can access the player's position in `OnEnable` via the `GameData` without direct coupling.
 
-**Creating the EnemySpawner**
+**4.3 Creating the EnemySpawner**
 
 1. Construct an EnemySpawner GameObject nested within the player to facilitate enemy spawning.
 2. Define necessary [[Variables]] within the EnemySpawner for `spawnRadius`, `deSpawnRadius`, and `spawnRate`.
@@ -257,7 +257,7 @@ To introduce enemies into your game loop, follow these steps:
 ---
 ## Lets add more
 
-##### 1. A skill to deal damage to enemies with UI feedback
+##### 5. A skill to deal damage to enemies with UI feedback
 
 For this we create a new prefab that sits inside the player
 - it need a Rigidbody (because it handles its own collisions with the enemies) and the "Player" tag so that it does not collide with the player
@@ -340,7 +340,7 @@ public class DamageSkillController : MonoBehaviour
 Next we need another filled image in our hud that will indicate weather our skill is on coolDown or not
 - for that we check in the Update method if the curCoolDown is lower or the same as the coolDown and set the fillAmount respectively
 
-##### 2. GameController with UI
+##### 6. GameController with UI
 
 For this we need a GameController inheriting form [[State Logic#3. Create a new StateMachine|StateMachine]]
 - it need the StartState GameState and EndState
@@ -413,7 +413,7 @@ public class GameController : StateMachine
 }
 ```
 
-##### 3. Sounds and audio options
+##### 7. Sounds and audio options
 
 For that we to get some Sounds. We can take some free sounds from [Kenny](https://www.kenney.nl/assets/impact-sounds)
 Lets add some sounds for the start button, the dealDamageToPlayer event, the skill and for game over.
