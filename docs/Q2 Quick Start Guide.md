@@ -80,6 +80,7 @@ Start your prototype with a clean slate. Create a new scene and name it accordin
 With the initial setup in place, we're ready to begin building the individual components of this prototype. Let's move on to the next steps!
 
 ---
+
 #### 2. Player, Movement and Camera Setup
 
 In this section, we'll work on setting up the player's character movement and camera functionality. You can either use the provided sample player or integrate your own character controller, depending on your preference.
@@ -113,6 +114,7 @@ At this point, your project, scene, and player should resemble the setup shown b
 With the player, movement controls, and camera setup in place, we're making great progress. Let's move on to the next steps!
 
 ---
+
 ##### 3. Player Health Controller with Damage Event
 
 In this section, we'll implement a player health system that responds to damage events and provides UI feedback for the player's health status.
@@ -228,6 +230,7 @@ private void DamagePlayerTest()
 With the player health controller and damage events set up, your game prototype is becoming more interactive and engaging. In the next section, we'll delve into enemy spawning and interactions to further enhance the game loop.
 
 ---
+
 ##### 4. Enemies and EnemySpawner
 
 To introduce enemies into your game loop, follow these steps:
