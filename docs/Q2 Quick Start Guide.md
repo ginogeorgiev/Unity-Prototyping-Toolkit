@@ -11,9 +11,9 @@ Let's dive into the guide and explore the features and workflows that the Unity 
 ---
 ### What We're Implementing in This Guide (Estimated Time: ~2 hours)
 
-	In this section, we'll outline the key components we'll be working on during
-	the course of this guide. These implementations are essential to creating
-	a simple game loop.
+	These implementations are essential to create	a simple game loop.
+
+In this section, we'll outline the key components we'll be working on during the course of this guide. 
 
 1. **Simple Player and Camera Setup** _(Approx. 20 minutes)_
     - Create a basic player character with planar movement controls.
