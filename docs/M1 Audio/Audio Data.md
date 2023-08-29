@@ -11,7 +11,6 @@ Play AudioEvent is the basic Audio Event that comes with this Toolkit.
 -  It serves as a kind of channel for all the play audio events.
 -  It is also possible to create your own audio Event for that have a look at [[Create your own typed DataEvent]]
 
-- It can either be referenced 
 #### Stop AudioEvent
 
 Stop AudioEvent is the basic Audio Event that comes with this Toolkit.
