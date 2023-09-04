@@ -1,0 +1,13 @@
+
+#ROOTNAMESPACEBEGIN#
+namespace Logic
+{
+	public class #SCRIPTNAME#
+	{
+		public #SCRIPTNAME#()
+        {
+        
+        }
+	}
+}
+#ROOTNAMESPACEEND#

@@ -1,0 +1,39 @@
+using PrototypingToolkit.Core;
+
+#ROOTNAMESPACEBEGIN#
+namespace Logic
+{
+    public class #SCRIPTNAME# : BaseState
+    {
+        public #SCRIPTNAME#()
+        {
+        }
+        #NOTRIM#
+        protected override void OnEnter()
+        {
+        #NOTRIM#
+        }
+        #NOTRIM#
+        internal override void Execute()
+        {
+        #NOTRIM#         
+        }
+        #NOTRIM#
+        internal override void FixedExecute()
+        {
+        #NOTRIM#         
+        }
+        #NOTRIM#
+        protected override void OnExit()
+        {
+        #NOTRIM# 
+        }
+        #NOTRIM#
+        public override bool HasNextState(BaseState nextState)
+        {
+            // return nextState.GetType() == typeof(SomeState);
+            return false;
+        }
+    }
+}
+#ROOTNAMESPACEEND#

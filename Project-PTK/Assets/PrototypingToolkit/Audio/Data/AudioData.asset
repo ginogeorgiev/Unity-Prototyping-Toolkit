@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36eecfea98ebd444f8568be4039cfeb0, type: 3}
+  m_Name: AudioData
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: ddfc59eb5063ad049aa986ce61d207dc, type: 2}
+  playAudioEvent: {fileID: 11400000, guid: 3421a34007b001641b0e3846f27d9cd8, type: 2}
+  stopAudioEvent: {fileID: 11400000, guid: fb35d61171b032b459a8425bae673fd3, type: 2}
+  muteAudio: {fileID: 11400000, guid: 2a1cd216bc579954188e10d31c9661b3, type: 2}
+  muteAudioInBackground: {fileID: 11400000, guid: 4ad129530d1aa9b44918d4f6ad8443e3,
+    type: 2}
+  masterVolume: {fileID: 11400000, guid: 81a832ab635081e49a23f80dd8730f59, type: 2}
+  musicVolume: {fileID: 11400000, guid: a189d93e83f915644904d102d49307d7, type: 2}
+  soundsVolume: {fileID: 11400000, guid: d1478abb2d0d2224f92a52d1b6fc507b, type: 2}
+  ambienceVolume: {fileID: 11400000, guid: 6b7bb0139a969b44b88be3e7c71e1e54, type: 2}
+  uiVolume: {fileID: 11400000, guid: cafb7061535dd36448b06286b82e4104, type: 2}
+  voiceVolume: {fileID: 11400000, guid: 50260ad6a54897d4eaca8f89e15c324c, type: 2}

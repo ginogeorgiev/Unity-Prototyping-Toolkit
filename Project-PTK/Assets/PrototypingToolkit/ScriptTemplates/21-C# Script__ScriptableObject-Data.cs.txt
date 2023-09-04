@@ -1,0 +1,25 @@
+using UnityEngine;
+
+#ROOTNAMESPACEBEGIN#
+namespace Logic
+{
+	[CreateAssetMenu(fileName = "new#SCRIPTNAME#", menuName = "Features/FeatureA/#SCRIPTNAME#")]
+	public class #SCRIPTNAME# : ScriptableObject
+	{
+		[Header("Data")]
+		[SerializeField] private ScriptableObject data;
+		#NOTRIM#
+		public ScriptableObject Data => data;
+		#NOTRIM#
+		private void OnEnable()
+		{
+        	#NOTRIM#
+		}
+		#NOTRIM#
+		private void OnDisable()
+		{
+        	#NOTRIM#
+		}
+	}
+}
+#ROOTNAMESPACEEND#

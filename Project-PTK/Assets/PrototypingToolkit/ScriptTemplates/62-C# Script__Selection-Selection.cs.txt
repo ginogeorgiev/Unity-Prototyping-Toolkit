@@ -1,0 +1,10 @@
+using PrototypingToolkit.Core;
+using UnityEngine;
+
+#ROOTNAMESPACEBEGIN#
+namespace Logic
+{
+	[CreateAssetMenu(fileName = "new#SCRIPTNAME#", menuName = "FEATURENAME/#SCRIPTNAME#")]
+	public class #SCRIPTNAME# : Selection<> {	}
+}
+#ROOTNAMESPACEEND#

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f29a9c6feccf24988a5aa032aa4d5d, type: 3}
+  m_Name: GameStart_AudioEventData
+  m_EditorClassIdentifier: 
+  audioGroup: {fileID: -4252341119497487437, guid: ddfc59eb5063ad049aa986ce61d207dc,
+    type: 2}
+  looping: 0
+  fadeIn: 0
+  fadeInMultiplier: 0.2
+  fadeOutOnStop: 0
+  fadeOutMultiplier: 0.2
+  audioClips:
+  - audioClip: {fileID: 8300000, guid: 2a7fcea89a73de748b29e53076064a83, type: 3}
+    volume:
+      Min: 0.41725406
+      Max: 0.72173667
+    pitch:
+      Min: 1.0036657
+      Max: 1.0036657
+    pan:
+      Min: 0
+      Max: 0

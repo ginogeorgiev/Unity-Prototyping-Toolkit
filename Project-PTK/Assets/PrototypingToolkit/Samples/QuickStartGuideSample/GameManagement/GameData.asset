@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01816a74eaee413d8bfc886afb8b6def, type: 3}
+  m_Name: GameData
+  m_EditorClassIdentifier: 
+  gameStart: {fileID: 11400000, guid: 5cfd47074636edb4d9da2ef4ffa4111b, type: 2}
+  gameOver: {fileID: 11400000, guid: 5cce43f7cb597df46b1beb3e906c281c, type: 2}
+  reStart: {fileID: 11400000, guid: ed659b3787d7ddc41a48ec675833940f, type: 2}
+  playerTransform: {fileID: 0}
+  playerMaxMovementSpeed: {fileID: 11400000, guid: a878cd0173113e744bb3e0d8f73e9552,
+    type: 2}
+  playerCurrentMovementSpeed: {fileID: 11400000, guid: d2fa54b69418b3a4f80a22e81c32dddf,
+    type: 2}
+  playerMovementInput: {fileID: 2843129829507980575, guid: b64bdcfa83f2bf84dbc9cf7fc4f5a2bd,
+    type: 3}
+  playerHealth: {fileID: 11400000, guid: 60a502bba51c3584b84f057f03a68e51, type: 2}
+  dealDamageToPlayer: {fileID: 11400000, guid: 6cb821dd1eb9f844b85bf3ce45db01d5, type: 2}
+  enemyContainer: {fileID: 0}
+  enemyMovementSpeed: {fileID: 11400000, guid: 41d52fd1c9970b748a3543723d0ae84e, type: 2}
+  enemyDamage: {fileID: 11400000, guid: 1257bef10f2d15a428173fe500ab2cd5, type: 2}
+  spawnRadius: {fileID: 11400000, guid: 970b2e6c8b78c4c45996c67eb64d62bb, type: 2}
+  deSpawnRadius: {fileID: 11400000, guid: c582accf57258884ca35f95374dfd84f, type: 2}
+  spawnRate: {fileID: 11400000, guid: 2904f762bfdafa0438f16327ecf73b32, type: 2}
+  skillCoolDown: {fileID: 11400000, guid: 5ec03d33e5d4b6646b2330bfbd3e677a, type: 2}
+  curCoolDown: {fileID: 11400000, guid: f174e51e4cc7119498ae0ee893e01bb2, type: 2}
+  skillActiveTime: {fileID: 11400000, guid: 4ca129d1585b3484eb3e28afcf57ae11, type: 2}
+  skillInput: {fileID: -5187073973391938911, guid: b64bdcfa83f2bf84dbc9cf7fc4f5a2bd,
+    type: 3}
+  audioData: {fileID: 11400000, guid: ee4c2f2f8d152da4ea929dbfba54434d, type: 2}
+  bumpSound: {fileID: 11400000, guid: 7f28acfb786cf9a4b8c1422362c5f857, type: 2}
+  gameOverSound: {fileID: 11400000, guid: 7393d6717245c3c41b5808df60f0993c, type: 2}
+  skillSound: {fileID: 11400000, guid: dedf7d32774bf744cb82c4506ae02afe, type: 2}

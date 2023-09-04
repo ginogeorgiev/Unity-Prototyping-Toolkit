@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 409b8902e38fda44698ceb96c4bd5c3b, type: 3}
+  m_Name: Options_SettingsData
+  m_EditorClassIdentifier: 
+  audioData: {fileID: 11400000, guid: ee4c2f2f8d152da4ea929dbfba54434d, type: 2}
+  inputRebindData: {fileID: 11400000, guid: 256cea8912e943046b68bfb4a7b3965c, type: 2}

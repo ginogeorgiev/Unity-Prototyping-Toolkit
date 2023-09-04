@@ -1,0 +1,32 @@
+using UnityEngine;
+
+#ROOTNAMESPACEBEGIN#
+namespace Logic
+{
+	public class #SCRIPTNAME# : MonoBehaviour
+	{
+		[Header("Data")]
+		[SerializeField] private ScriptableObject data;
+		#NOTRIM#
+		private void Awake()
+		{
+		#NOTRIM#
+		}
+		#NOTRIM#
+		private void OnEnable()
+		{
+		#NOTRIM#
+		}
+		#NOTRIM#
+		private void OnDisable()
+		{
+		#NOTRIM#
+		}
+		#NOTRIM#
+		private void Update()
+		{
+		#NOTRIM#
+		}
+	}
+}
+#ROOTNAMESPACEEND#

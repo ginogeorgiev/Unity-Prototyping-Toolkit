@@ -1,0 +1,14 @@
+
+#ROOTNAMESPACEBEGIN#
+namespace Logic
+{
+	[System.Serializable]
+    public class #SCRIPTNAME#
+    {
+        public #SCRIPTNAME# ()
+        {
+    
+        }
+    }
+}
+#ROOTNAMESPACEEND#

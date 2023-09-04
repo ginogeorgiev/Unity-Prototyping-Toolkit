@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1fa37947c36944eab19533efc8009c, type: 3}
+  m_Name: InputRebindData
+  m_EditorClassIdentifier: 
+  currentRebindActionName: {fileID: 11400000, guid: cf3a0d8650ac15b408612c86a14e943e,
+    type: 2}
+  currentRebindKeyName: {fileID: 11400000, guid: ac1338b7e66b9124abe38d7cd0d400f8,
+    type: 2}
+  enableRebindPopUp: {fileID: 11400000, guid: 074f3e3cb6f04e740804e13ce66ea2e8, type: 2}
+  disableRebindPopUp: {fileID: 11400000, guid: 4adef129dde3d8343bbb57ba4a50fbee, type: 2}
+  switchToStartRebind: {fileID: 11400000, guid: 3cdde95d3b53ecd42944b2df875acd3e,
+    type: 2}
+  switchToConcludeRebind: {fileID: 11400000, guid: 0fc958e95bb33584e87ac3183e0e5337,
+    type: 2}
+  cancelRebind: {fileID: 11400000, guid: a682854bc1ebe05419f78f3bdd769b7b, type: 2}
+  captureRebind: {fileID: 11400000, guid: 94ef7fadfff16774db9196af8d84df25, type: 2}
+  applyRebind: {fileID: 11400000, guid: 91ea5d27ac1fe1f449fcfb9731a60095, type: 2}

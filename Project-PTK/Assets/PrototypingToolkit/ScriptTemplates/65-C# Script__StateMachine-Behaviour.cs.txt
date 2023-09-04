@@ -1,0 +1,18 @@
+using PrototypingToolkit.Core;
+
+#ROOTNAMESPACEBEGIN#
+namespace Logic
+{
+    public class #SCRIPTNAME# : StateMachine
+    {
+        private SomeState someState;
+        
+        private void Awake()  
+       		{
+       			someState = new SomeState();
+       			
+       			Initialize(someState);
+       		} 
+    }
+}
+#ROOTNAMESPACEEND#

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57b329dfa89b91c489e53917a1778fb4, type: 3}
+  m_Name: Voice_VolumeFloatVariable
+  m_EditorClassIdentifier: 
+  startValue: 0
+  currentValue: 0
+  onCurrentChanged: {fileID: 11400000, guid: 8b216013e18b6384994014fd9cb3a384, type: 2}

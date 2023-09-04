@@ -1,0 +1,10 @@
+
+#ROOTNAMESPACEBEGIN#
+namespace Logic
+{
+	public interface #SCRIPTNAME#
+	{
+		
+	}
+}
+#ROOTNAMESPACEEND#

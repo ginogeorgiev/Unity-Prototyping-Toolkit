@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb07bb5b782c0ef4c81b7e24068337d1, type: 3}
+  m_Name: SampleEvents_DataContainer
+  m_EditorClassIdentifier: 
+  on: {fileID: 11400000, guid: dc1e148835e20ec43b30d74d4b9c267f, type: 2}
+  off: {fileID: 11400000, guid: 974da1ea4d37d5f4ebed8a8177a08fe0, type: 2}
+  goOn: {fileID: 11400000, guid: 4697433e83a268340b877a692c56b2e2, type: 2}
+  goOff: {fileID: 11400000, guid: 40d72a1b010ecfc4095ab70314dd9f14, type: 2}
+  isOn: {fileID: 11400000, guid: dd925302808b6b14cae44fc9bf0dda4e, type: 2}
+  isOff: {fileID: 11400000, guid: 878c3ef5d4f4e664d90ed442059ee6e7, type: 2}
+  onEventCounter: {fileID: 11400000, guid: b6cf65f94e4516e4591e6099ac860c60, type: 2}
