@@ -11,7 +11,7 @@ Let's dive into the guide and explore the features and workflows that the Unity 
 ---
 ### What We're Implementing in This Guide (Estimated Time: ~2 hours)
 
-	These implementations are essential to create	a simple game loop.
+	These implementations are essential to create a simple game loop.
 
 In this section, we'll outline the key components we'll be working on during the course of this guide. 
 
