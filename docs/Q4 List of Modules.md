@@ -20,6 +20,9 @@
 | - [[Audio Options]] | Manages audio-related settings. |
 | - [[Controls Options]] | Handles control-related settings. |
 |  |  |
+| **Art** | Simple Prototyping Materials |
+| - 3D-Assets | A collection of 3D Models, Prefabs and Materials |
+|  |  |
 | **Core** |  |
 | - [[Command Logic]] | Implemented pattern to use Commands |
 | - [[Domain Logic]] | To categorize events (later more) by features and make them loggable and describable |

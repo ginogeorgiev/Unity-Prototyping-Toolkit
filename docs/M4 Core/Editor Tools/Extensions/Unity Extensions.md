@@ -1,3 +1,3 @@
-Some unity expansion
+Some unity extensions
 
 **-- work in progress --**

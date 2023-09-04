@@ -1,4 +1,6 @@
 Simple implementation of a factory.
 
 Can be used to:
--  create objects
+- create objects
+
+**-- work in progress --**
