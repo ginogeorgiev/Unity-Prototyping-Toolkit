@@ -5,7 +5,7 @@ The Audio Manger will listen to Play_AdioEvents and Stop_AdioEvents from the [[A
 
 -  Drag and drop the AudioManager Prefab into your Scene and set it up
 	-  Check if AudioData and AudioEmitterPoolData are referenced
-	-  Choose your initial pool size
+	-  Choose your initial [[Pool]] size
 	-  In the Debug Area can be seen which AudioEmitter are currently used
 
 ![[Pasted image 20230810083024.png]]
