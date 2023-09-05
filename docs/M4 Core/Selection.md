@@ -83,12 +83,11 @@ public class SomeBehaviour : MonoBehaviour
 
 #### API
 
-The following public methods are available for working with variables:
+The following public methods are available for working with selections:
 
 | Public Methods | Description | Parameter |
 | :------- | :------ | :------: |
-| StartValue | Getter/setter for the start value of the variable. | - |
-| OnCurrentChanged | Getter/setter for the callback event raised when the "Current Value" is changed. | - |
-| Get | Retrieves the current value of the variable. | - |
-| Set | Sets the current value of the variable. | T value, bool raiseChangedEvent = true |
-| Restore | Sets the current value of the variable to its start value. | bool raiseChangedEvent = false |
+| OnCurrentChanged | Getter/setter for the callback event raised when the selection is changed. | - |
+| Get | Retrieves the current object of the selection. | - |
+| Set | Sets the current object of the selection. | T value |
+| Restore | Sets the current object of the selection to its default. | - |
