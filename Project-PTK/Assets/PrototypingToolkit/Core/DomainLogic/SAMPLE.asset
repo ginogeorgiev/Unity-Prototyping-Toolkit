@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9a4d51cec95c642b3b96409c18cd43, type: 3}
   m_Name: SAMPLE
   m_EditorClassIdentifier: 
-  description: 
+  description: All PTK Sample related Events.
   logEvent: 1
   logColor: {r: 0.7647059, g: 0.53200114, b: 0.0745098, a: 0}
