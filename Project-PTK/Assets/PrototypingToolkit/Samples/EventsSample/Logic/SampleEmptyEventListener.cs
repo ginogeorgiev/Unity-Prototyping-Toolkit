@@ -31,13 +31,13 @@ namespace PrototypingToolkit.Samples.Logic
 		private void CubeOn()
 		{
 			cube.SetActive(true);
-			sampleEventDataContainer.OnEventCounter.AddToCurrent(1);
+			sampleEventDataContainer.OnEventCounter.Add(1);
 		}
 
 		private void CubeOff()
 		{
 			cube.SetActive(false);
-			sampleEventDataContainer.OnEventCounter.AddToCurrent(1);
+			sampleEventDataContainer.OnEventCounter.Add(1);
 		}
 	}
 }

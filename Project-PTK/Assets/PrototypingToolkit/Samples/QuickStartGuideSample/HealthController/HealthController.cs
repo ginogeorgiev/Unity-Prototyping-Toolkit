@@ -20,7 +20,7 @@ namespace PrototypingToolkit.Samples.QuickStartGuideSample.HealthController
 
         private void OnDamageToPlayer()
         {
-            gameData.PlayerHealth.AddToCurrent(-gameData.EnemyDamage.Get());
+            gameData.PlayerHealth.Add(-gameData.EnemyDamage.Get());
             gameData.AudioData.PlayAudioEvent.Raise(gameData.BumpSound);
         }
     }

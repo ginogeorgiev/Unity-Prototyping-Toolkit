@@ -43,7 +43,7 @@ namespace PrototypingToolkit.Samples.QuickStartGuideSample.Skills
 		{
 			if (gameData.CurCoolDown.Get() > 0)
 			{
-				gameData.CurCoolDown.AddToCurrent(- Time.deltaTime);
+				gameData.CurCoolDown.Add(- Time.deltaTime);
 			}
 			else if (isPressed)
 			{

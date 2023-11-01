@@ -499,7 +499,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 991470606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f175bcb52b844d9bc11dabf57bc574f, type: 3}
+  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   event: {fileID: 11400000, guid: dc1e148835e20ec43b30d74d4b9c267f, type: 2}
@@ -521,7 +521,7 @@ MonoBehaviour:
       - m_Target: {fileID: 11400000, guid: b6cf65f94e4516e4591e6099ac860c60, type: 2}
         m_TargetAssemblyTypeName: PrototypingToolkit._Common.Logic.Variables.PrimitiveTypes.IntVariable,
           Assembly-CSharp
-        m_MethodName: AddToCurrent
+        m_MethodName: Add
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -540,7 +540,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 991470606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f175bcb52b844d9bc11dabf57bc574f, type: 3}
+  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   event: {fileID: 11400000, guid: 974da1ea4d37d5f4ebed8a8177a08fe0, type: 2}
@@ -562,7 +562,7 @@ MonoBehaviour:
       - m_Target: {fileID: 11400000, guid: b6cf65f94e4516e4591e6099ac860c60, type: 2}
         m_TargetAssemblyTypeName: PrototypingToolkit._Common.Logic.Variables.PrimitiveTypes.IntVariable,
           Assembly-CSharp
-        m_MethodName: AddToCurrent
+        m_MethodName: Add
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

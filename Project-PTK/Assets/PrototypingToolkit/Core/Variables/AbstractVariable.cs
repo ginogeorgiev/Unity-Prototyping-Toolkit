@@ -35,6 +35,14 @@ namespace PrototypingToolkit.Core
             RaiseOnCurrentChangedEvent();
         }
 
+        public void Set(T value, bool raiseChangedEvent)
+        {
+            if (value.Equals(currentValue)) return;
+            currentValue = value;
+            
+            if (raiseChangedEvent) RaiseOnCurrentChangedEvent();
+        }
+
         private void OnValidate()
         {
             RaiseOnCurrentChangedEvent();

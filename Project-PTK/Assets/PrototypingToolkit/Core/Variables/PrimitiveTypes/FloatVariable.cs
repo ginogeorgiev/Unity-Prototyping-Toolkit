@@ -8,13 +8,13 @@ namespace PrototypingToolkit.Core.PrimitiveTypes
         order = PTK_MenuNames.O_VARIABLES)]
     public class FloatVariable : AbstractVariable<float>
     {
-        public void AddToCurrent(float value)
+        public void Add(float value)
         {
             currentValue += value;
             RaiseOnCurrentChangedEvent();
         }
 
-        public void AddToCurrent(FloatVariable value)
+        public void Add(FloatVariable value)
         {
             currentValue += value.currentValue;
             RaiseOnCurrentChangedEvent();

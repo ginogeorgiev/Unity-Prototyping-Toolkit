@@ -22,13 +22,13 @@ namespace PrototypingToolkit.Samples.Logic
 		private void CubeOn(SampleEventCubeBehaviour cube)
 		{
 			cube.gameObject.SetActive(true);
-			eventDataContainer.OnEventCounter.AddToCurrent(1);
+			eventDataContainer.OnEventCounter.Add(1);
 		}
 
 		private void CubeOff(SampleEventCubeBehaviour cube)
 		{
 			cube.gameObject.SetActive(false);
-			eventDataContainer.OnEventCounter.AddToCurrent(1);
+			eventDataContainer.OnEventCounter.Add(1);
 		}
 	}
 }

@@ -8,13 +8,13 @@ namespace PrototypingToolkit.Core.PrimitiveTypes
         order = PTK_MenuNames.O_VARIABLES)]
     public class IntVariable : AbstractVariable<int>
     {
-        public void AddToCurrent(int value)
+        public void Add(int value)
         {
             currentValue += value;
             RaiseOnCurrentChangedEvent();
         }
 
-        public void AddToCurrent(IntVariable value)
+        public void Add(IntVariable value)
         {
             currentValue += value.currentValue;
             RaiseOnCurrentChangedEvent();

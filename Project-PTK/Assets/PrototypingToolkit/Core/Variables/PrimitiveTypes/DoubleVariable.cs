@@ -8,13 +8,13 @@ namespace PrototypingToolkit.Core.PrimitiveTypes
         order = PTK_MenuNames.O_VARIABLES)]
     public class DoubleVariable : AbstractVariable<double>
     {
-        public void AddToCurrent(double value)
+        public void Add(double value)
         {
             currentValue += value;
             RaiseOnCurrentChangedEvent();
         }
 
-        public void AddToCurrent(DoubleVariable value)
+        public void Add(DoubleVariable value)
         {
             currentValue += value.currentValue;
             RaiseOnCurrentChangedEvent();
