@@ -15,7 +15,7 @@ namespace PrototypingToolkit.Samples.Logic
             this.hud = hud;
         }
         
-        protected override void OnEnter()
+        public override void OnEnter()
         {
             testCube.ClickAmount.Restore();
             
@@ -27,12 +27,12 @@ namespace PrototypingToolkit.Samples.Logic
             testCube.CubeRigidbody.isKinematic = false;
         }
         
-        internal override void Execute()
+        public override void Execute()
         {
                  
         }
         
-        protected override void OnExit()
+        public override void OnExit()
         {
             testCube.gameObject.SetActive(false);
             hud.SetActive(false);

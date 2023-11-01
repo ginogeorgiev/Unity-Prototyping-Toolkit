@@ -15,13 +15,13 @@ namespace PrototypingToolkit.Samples.SamplePlayer.Logic
             this.playerRigidbody = playerRigidbody;
         }
 
-        protected override void OnEnter()
+        public override void OnEnter()
         {
             movementSpeed.Set(0f);
             playerRigidbody.velocity = Vector2.zero;
         }
 
-        protected override void OnExit()
+        public override void OnExit()
         {
             
         }

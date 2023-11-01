@@ -12,7 +12,7 @@ namespace PrototypingToolkit.Core
     
     public abstract class StateMachine : MonoBehaviour
     {
-        [SerializeField] internal CurrentStateData currentStateData;
+        [SerializeField] public CurrentStateData currentStateData;
 
         protected void Initialize(BaseState initialState)
         {

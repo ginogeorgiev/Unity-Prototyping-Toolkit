@@ -25,7 +25,7 @@ namespace PrototypingToolkit.Core
             OnAfterEnter();
         }
 
-        protected abstract void OnEnter();
+        public abstract void OnEnter();
         
         private void OnAfterEnter()
         {
@@ -34,7 +34,7 @@ namespace PrototypingToolkit.Core
             if (Data.IsExecuting) Data.IsExecuting.SetTrue();
         }
 
-        internal virtual void Execute()
+        public virtual void Execute()
         {
             
         }
@@ -53,7 +53,7 @@ namespace PrototypingToolkit.Core
             OnAfterExit();
         }
 
-        protected abstract void OnExit();
+        public abstract void OnExit();
         
         private void OnAfterExit()
         {

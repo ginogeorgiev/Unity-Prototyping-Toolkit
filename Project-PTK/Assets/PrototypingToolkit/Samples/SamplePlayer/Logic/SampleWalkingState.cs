@@ -41,12 +41,12 @@ namespace PrototypingToolkit.Samples.SamplePlayer.Logic
             this.firstPersonCamera = firstPersonCamera;
         }
 
-        protected override void OnEnter()
+        public override void OnEnter()
         {
             curMovementSpeed.Set(maxMovementSpeed.Get());
         }
 
-        internal override void Execute()
+        public override void Execute()
         {
             movementInput = movementInputAction.ReadValue<Vector2>();
 
@@ -136,7 +136,7 @@ namespace PrototypingToolkit.Samples.SamplePlayer.Logic
             playerModelTransform.rotation = rotation;
         }
 
-        protected override void OnExit()
+        public override void OnExit()
         {
         }
 

@@ -12,17 +12,17 @@ namespace PrototypingToolkit.Samples.Logic
             this.result = result;
         }
         
-        protected override void OnEnter()
+        public override void OnEnter()
         {
             result.SetActive(true);
         }
         
-        internal override void Execute()
+        public override void Execute()
         {
                  
         }
         
-        protected override void OnExit()
+        public override void OnExit()
         {
             result.SetActive(false);
         }

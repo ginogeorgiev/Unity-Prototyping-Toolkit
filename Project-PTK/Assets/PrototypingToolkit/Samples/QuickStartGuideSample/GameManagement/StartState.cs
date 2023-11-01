@@ -17,18 +17,18 @@ namespace PrototypingToolkit.Samples.QuickStartGuideSample.GameManagement
             this.startScreen = startScreen;
         }
         
-        protected override void OnEnter()
+        public override void OnEnter()
         {
             audioDataManager.SetActive(true);
             startScreen.SetActive(true);
         }
         
-        internal override void Execute()
+        public override void Execute()
         {
                  
         }
         
-        protected override void OnExit()
+        public override void OnExit()
         {
             audioDataManager.SetActive(false);
         }

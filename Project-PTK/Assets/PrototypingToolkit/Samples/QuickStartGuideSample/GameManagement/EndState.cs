@@ -15,17 +15,17 @@ namespace PrototypingToolkit.Samples.QuickStartGuideSample.GameManagement
             this.endScreen = endScreen;
         }
         
-        protected override void OnEnter()
+        public override void OnEnter()
         {
             endScreen.SetActive(true);
         }
         
-        internal override void Execute()
+        public override void Execute()
         {
                  
         }
         
-        protected override void OnExit()
+        public override void OnExit()
         {
             endScreen.SetActive(false);
         }
