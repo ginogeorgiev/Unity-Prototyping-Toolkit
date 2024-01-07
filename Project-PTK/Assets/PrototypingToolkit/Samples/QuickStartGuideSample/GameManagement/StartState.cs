@@ -16,8 +16,8 @@ namespace PrototypingToolkit.Samples.QuickStartGuideSample.GameManagement
             this.audioDataManager = audioDataManager;
             this.startScreen = startScreen;
         }
-        
-        public override void OnEnter()
+
+        protected override void OnEnter()
         {
             audioDataManager.SetActive(true);
             startScreen.SetActive(true);
@@ -27,8 +27,8 @@ namespace PrototypingToolkit.Samples.QuickStartGuideSample.GameManagement
         {
                  
         }
-        
-        public override void OnExit()
+
+        protected override void OnExit()
         {
             audioDataManager.SetActive(false);
         }

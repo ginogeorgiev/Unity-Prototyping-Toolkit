@@ -13,6 +13,7 @@ namespace PrototypingToolkit.Core
 		
 		private event Action<T> actionListeners;
 
+		// ReSharper disable Unity.PerformanceAnalysis
 		public void Raise(T data)
 		{
 			if (!Application.isPlaying) return;

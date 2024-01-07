@@ -30,7 +30,7 @@ namespace PrototypingToolkit.Samples.QuickStartGuideSample.Player
             this.playerRigidbody = playerRigidbody;
         }
 
-        public override void OnEnter()
+        protected override void OnEnter()
         {
             curMovementSpeed.Set(maxMovementSpeed.Get());
         }
@@ -55,7 +55,7 @@ namespace PrototypingToolkit.Samples.QuickStartGuideSample.Player
             playerModelTransform.rotation = rotation;
         }
 
-        public override void OnExit()
+        protected override void OnExit()
         {
         }
 

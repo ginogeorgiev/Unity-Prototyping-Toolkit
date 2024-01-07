@@ -18,6 +18,7 @@ namespace PrototypingToolkit.Core
 		
 		private event Action actionListeners;
 
+		// ReSharper disable Unity.PerformanceAnalysis
 		[ButtonMethod]
 		public void Raise()
 		{

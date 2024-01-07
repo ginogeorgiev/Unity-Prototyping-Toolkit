@@ -24,8 +24,13 @@ namespace PrototypingToolkit.Core
             currentState.Enter();
             SetStateInfo();
         }
-        
-        public void SetStateInfo()
+
+        public void ExitState()
+        {
+            currentState.Exit();
+        }
+
+        private void SetStateInfo()
         {
             currentStateName = currentState.GetType().Name;
         }

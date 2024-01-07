@@ -11,8 +11,8 @@ namespace PrototypingToolkit.Samples.Logic
         {
             this.result = result;
         }
-        
-        public override void OnEnter()
+
+        protected override void OnEnter()
         {
             result.SetActive(true);
         }
@@ -21,8 +21,8 @@ namespace PrototypingToolkit.Samples.Logic
         {
                  
         }
-        
-        public override void OnExit()
+
+        protected override void OnExit()
         {
             result.SetActive(false);
         }

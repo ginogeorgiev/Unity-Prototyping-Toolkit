@@ -41,7 +41,7 @@ namespace PrototypingToolkit.Samples.SamplePlayer.Logic
             this.firstPersonCamera = firstPersonCamera;
         }
 
-        public override void OnEnter()
+        protected override void OnEnter()
         {
             curMovementSpeed.Set(maxMovementSpeed.Get());
         }
@@ -136,7 +136,7 @@ namespace PrototypingToolkit.Samples.SamplePlayer.Logic
             playerModelTransform.rotation = rotation;
         }
 
-        public override void OnExit()
+        protected override void OnExit()
         {
         }
 

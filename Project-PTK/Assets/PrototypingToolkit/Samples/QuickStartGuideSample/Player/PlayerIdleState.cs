@@ -15,13 +15,13 @@ namespace PrototypingToolkit.Samples.QuickStartGuideSample.Player
             this.playerRigidbody = playerRigidbody;
         }
 
-        public override void OnEnter()
+        protected override void OnEnter()
         {
             movementSpeed.Set(0f);
             playerRigidbody.velocity = Vector2.zero;
         }
 
-        public override void OnExit()
+        protected override void OnExit()
         {
             
         }

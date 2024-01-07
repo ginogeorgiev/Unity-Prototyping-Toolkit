@@ -25,7 +25,7 @@ namespace PrototypingToolkit.Core
             OnAfterEnter();
         }
 
-        public abstract void OnEnter();
+        protected abstract void OnEnter();
         
         private void OnAfterEnter()
         {
@@ -53,7 +53,7 @@ namespace PrototypingToolkit.Core
             OnAfterExit();
         }
 
-        public abstract void OnExit();
+        protected abstract void OnExit();
         
         private void OnAfterExit()
         {

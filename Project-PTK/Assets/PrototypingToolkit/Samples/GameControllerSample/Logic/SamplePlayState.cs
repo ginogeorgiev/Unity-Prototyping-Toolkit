@@ -14,8 +14,8 @@ namespace PrototypingToolkit.Samples.Logic
             this.testCube = testCube;
             this.hud = hud;
         }
-        
-        public override void OnEnter()
+
+        protected override void OnEnter()
         {
             testCube.ClickAmount.Restore();
             
@@ -31,8 +31,8 @@ namespace PrototypingToolkit.Samples.Logic
         {
                  
         }
-        
-        public override void OnExit()
+
+        protected override void OnExit()
         {
             testCube.gameObject.SetActive(false);
             hud.SetActive(false);

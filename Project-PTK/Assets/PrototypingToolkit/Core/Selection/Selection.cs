@@ -4,10 +4,16 @@ namespace PrototypingToolkit.Core
 {
     public abstract class Selection<T> : ScriptableObject
     {
-        private T selection;
+        [SerializeField] private T selection;
         
         [Header("Optional Event")]
         [SerializeField] private EmptyEvent onSelectionChanged;
+
+        public EmptyEvent OnSelectionChanged
+        {
+            get => onSelectionChanged;
+            set => onSelectionChanged = value;
+        }
         
         public void Restore()
         {
@@ -25,6 +31,7 @@ namespace PrototypingToolkit.Core
             if (value == null)
             {
                 selection = default(T);
+                RaiseOnChangedEvent();
                 return;
             }
             

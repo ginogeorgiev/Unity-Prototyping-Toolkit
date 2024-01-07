@@ -14,8 +14,8 @@ namespace PrototypingToolkit.Samples.QuickStartGuideSample.GameManagement
             this.gameData = gameData;
             this.endScreen = endScreen;
         }
-        
-        public override void OnEnter()
+
+        protected override void OnEnter()
         {
             endScreen.SetActive(true);
         }
@@ -24,8 +24,8 @@ namespace PrototypingToolkit.Samples.QuickStartGuideSample.GameManagement
         {
                  
         }
-        
-        public override void OnExit()
+
+        protected override void OnExit()
         {
             endScreen.SetActive(false);
         }

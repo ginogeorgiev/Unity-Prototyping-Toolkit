@@ -26,8 +26,8 @@ namespace PrototypingToolkit.Samples.QuickStartGuideSample.GameManagement
             this.hud = hud;
             this.startScreen = startScreen;
         }
-        
-        public override void OnEnter()
+
+        protected override void OnEnter()
         {
             player.transform.ResetPosition();
             
@@ -57,8 +57,8 @@ namespace PrototypingToolkit.Samples.QuickStartGuideSample.GameManagement
         {
             
         }
-        
-        public override void OnExit()
+
+        protected override void OnExit()
         {
             gameData.DealDamageToPlayer.Unregister(OnPlayerHealthChanged);
             
