@@ -11,7 +11,8 @@ namespace PrototypingToolkit.Core.Editor
             AssetDatabase.LoadAssetAtPath<GameObject>(BasePrefabPath + "/Cameras/RTSCamera/RTS_Camera.prefab"),
             AssetDatabase.LoadAssetAtPath<GameObject>(BasePrefabPath + "/UI/EventSystem.prefab"),
             AssetDatabase.LoadAssetAtPath<GameObject>(BasePrefabPath + "/Audio/Prefabs/AudioManager.prefab"),
-            AssetDatabase.LoadAssetAtPath<GameObject>(BasePrefabPath + "/Options/Audio/Prefabs/AudioDataManager.prefab")
+            AssetDatabase.LoadAssetAtPath<GameObject>(BasePrefabPath + "/Options/Audio/Prefabs/AudioDataManager.prefab"),
+            AssetDatabase.LoadAssetAtPath<GameObject>(BasePrefabPath + "/Core/Events/EmptyEventListener.prefab")
         };
 
         [MenuItem("GameObject/PrototypingToolkit/RTSCamera", false, 12)]
@@ -36,6 +37,12 @@ namespace PrototypingToolkit.Core.Editor
         public static void CreateAudioDataManager(MenuCommand menuCommand)
         {
             CreatePrefabInstance(menuCommand, PrefabPaths[3]);
+        }
+
+        [MenuItem("GameObject/PrototypingToolkit/Empty Event Listener", false, 11)]
+        public static void CreateEmptyEventListener(MenuCommand menuCommand)
+        {
+            CreatePrefabInstance(menuCommand, PrefabPaths[4]);
         }
 
         // Add more methods for other prefabs as needed

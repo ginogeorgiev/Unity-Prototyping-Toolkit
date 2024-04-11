@@ -29,6 +29,12 @@ namespace PrototypingToolkit.Core
                 }
                 #endif
             }
+            
+            if (featureDomain)
+            {
+                logEvent = featureDomain.LogEvent;
+                logColor = featureDomain.LogColor;
+            }
         }
     }
 }
