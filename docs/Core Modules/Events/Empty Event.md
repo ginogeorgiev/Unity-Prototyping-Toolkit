@@ -52,7 +52,7 @@ The EmptyEventListener component enables easy event handling for EmptyEvents in 
 
 ![[Pasted image 20230623125604.png]]
 
-#### 5b. Respond to the Event via Code
+#### 5b. React to the Event via Code
 
 -  Reference the Event and respond to it if needed
 

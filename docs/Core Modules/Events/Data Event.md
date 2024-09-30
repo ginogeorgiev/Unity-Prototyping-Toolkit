@@ -30,7 +30,7 @@ See: [[Create your own typed DataEvent]]
 newEmptyEvent.Raise(Something);
 ```
 
-#### 5. Respond to the Event via Code
+#### 5. React to the Event via Code
 
 - Register the Event in OnEnable and Unregister it in OnDisable
 - Reference the Event and respond to it with parameter if needed
