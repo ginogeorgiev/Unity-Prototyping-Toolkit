@@ -1,0 +1,2093 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Q1%20Quick%20Setup%20-%20Installation%20Guide/">
+      
+      
+        <link rel="next" href="../Q4%20List%20of%20Modules/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Quick Start Guide - Unity Prototyping Toolkit Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quick-start-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Unity Prototyping Toolkit Documentation" class="md-header__button md-logo" aria-label="Unity Prototyping Toolkit Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Unity Prototyping Toolkit Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quick Start Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Unity Prototyping Toolkit Documentation" class="md-nav__button md-logo" aria-label="Unity Prototyping Toolkit Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Unity Prototyping Toolkit Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unity Prototyping Toolkit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Q1%20Quick%20Setup%20-%20Installation%20Guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick Setup - Installation Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Quick Start Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Quick Start Guide
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-were-implementing-in-this-guide-estimated-time-2-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      What We're Implementing in This Guide (Estimated Time: ~2 hours)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bonus-implementations-estimated-time-15-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bonus Implementations (Estimated Time: ~1.5 hours)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-get-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lets get started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lets get started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-initial-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Initial Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-player-movement-and-camera-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Player, Movement and Camera Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Player, Movement and Camera Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-player-health-controller-with-damage-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Player Health Controller with Damage Event
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-enemies-and-enemyspawner" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Enemies and EnemySpawner
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-add-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lets add more
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lets add more">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5-a-skill-to-deal-damage-to-enemies-with-ui-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. A skill to deal damage to enemies with UI feedback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-gamecontroller-with-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. GameController with UI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-sounds-and-audio-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Sounds and audio options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#now-its-your-turn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Now its your turn:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Q4%20List%20of%20Modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List of Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Core Modules
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Core Modules
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Core%20Modules/Command%20Logic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Command Logic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Core%20Modules/Domain%20Logic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feature Domain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Core%20Modules/Factory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Core%20Modules/Pool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Core%20Modules/Runtime%20Set/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Runtime Set
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Core%20Modules/Selection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Selection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Core%20Modules/State%20Logic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    State Logic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Core%20Modules/Variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Editor Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9">
+            <span class="md-nav__icon md-icon"></span>
+            Editor Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Core%20Modules/Editor%20Tools/Frame%20Rate%20Handler/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frame Rate Handler
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_9_2" id="__nav_5_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Attributes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Attributes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Core%20Modules/Editor%20Tools/Attributes/Better%20Tooltip/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Better Tooltip
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_9_3" id="__nav_5_9_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Extensions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_9_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9_3">
+            <span class="md-nav__icon md-icon"></span>
+            Extensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Core%20Modules/Editor%20Tools/Extensions/Unity%20Extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unity Extensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Core%20Modules/Editor%20Tools/Extensions/Wait%20Until%20UnityEvent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wait Until UnityEvent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_10" id="__nav_5_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Events
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_10">
+            <span class="md-nav__icon md-icon"></span>
+            Events
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Core%20Modules/Events/Create%20your%20own%20typed%20DataEvent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create your own typed DataEvent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Core%20Modules/Events/Create%20your%20own%20typed%20EmptyEvent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create your own typed EmptyEvent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Core%20Modules/Events/Data%20Event/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Event
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Core%20Modules/Events/Empty%20Event/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Empty Event
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Core%20Modules/Events/Event%20Hub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Event Hub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Feature Modules
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Feature Modules
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Audio
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Audio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Feature%20Modules/Audio/Audio%20Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audio Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Feature%20Modules/Audio/Audio%20Event%20Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audio Events &amp; Audio Event Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Feature%20Modules/Audio/Audio%20Manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audio Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cameras
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cameras
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Feature%20Modules/Cameras/Cameras/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cameras
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Options
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Options
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Feature%20Modules/Options/Audio%20Options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audio Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Feature%20Modules/Options/Controls%20Options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controls Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other Modules
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Other Modules
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ScriptTemplates
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            ScriptTemplates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Other%20Modules/ScriptTemplates/Script%20Templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Script Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-were-implementing-in-this-guide-estimated-time-2-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      What We're Implementing in This Guide (Estimated Time: ~2 hours)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bonus-implementations-estimated-time-15-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bonus Implementations (Estimated Time: ~1.5 hours)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-get-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lets get started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lets get started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-initial-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Initial Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-player-movement-and-camera-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Player, Movement and Camera Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Player, Movement and Camera Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-player-health-controller-with-damage-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Player Health Controller with Damage Event
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-enemies-and-enemyspawner" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Enemies and EnemySpawner
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-add-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lets add more
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lets add more">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5-a-skill-to-deal-damage-to-enemies-with-ui-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. A skill to deal damage to enemies with UI feedback
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-gamecontroller-with-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. GameController with UI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-sounds-and-audio-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Sounds and audio options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#now-its-your-turn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Now its your turn:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="quick-start-guide">Quick Start Guide<a class="headerlink" href="#quick-start-guide" title="Permanent link">&para;</a></h1>
+<p>Welcome to the Quick Start Guide for the Unity Prototyping Toolkit. In this guide, you'll find step-by-step instructions to help you get started with the toolkit's functionality. All the examples and resources mentioned here can be found in the Quick Start Guide Sample Folder.</p>
+<p>Our goal with the Quick Start Guide is to strike a balance between following best practices and avoiding unnecessary complexity during the early stages of development. We aim to empower you to efficiently create prototypes while maintaining a solid foundation for future enhancements.</p>
+<p>Let's dive into the guide and explore the features and workflows that the Unity Prototyping Toolkit offers.</p>
+<hr />
+<hr />
+<h3 id="what-were-implementing-in-this-guide-estimated-time-2-hours">What We're Implementing in This Guide (Estimated Time: ~2 hours)<a class="headerlink" href="#what-were-implementing-in-this-guide-estimated-time-2-hours" title="Permanent link">&para;</a></h3>
+<pre><code>These implementations are essential to create a simple game loop.
+</code></pre>
+<p>In this section, we'll outline the key components we'll be working on during the course of this guide. </p>
+<ol>
+<li><strong>Simple Player and Camera Setup</strong> <em>(Approx. 20 minutes)</em><ul>
+<li>Create a basic player character with planar movement controls.</li>
+<li>Set up an isometric camera view to provide a suitable perspective.</li>
+</ul>
+</li>
+<li><strong>Player Health Control and UI Feedback</strong> <em>(Approx. 40 minutes)</em><ul>
+<li>Implement a player health controller that triggers damage events.</li>
+<li>Integrate UI feedback to reflect changes in player health.</li>
+</ul>
+</li>
+<li><strong>Enemy Spawning and Movement</strong> <em>(Approx. 50 minutes)</em><ul>
+<li>Develop an enemy spawning system that generates enemies around the player.</li>
+<li>Configure enemies to move towards the player and pass them.</li>
+</ul>
+</li>
+</ol>
+<h3 id="bonus-implementations-estimated-time-15-hours">Bonus Implementations (Estimated Time: ~1.5 hours)<a class="headerlink" href="#bonus-implementations-estimated-time-15-hours" title="Permanent link">&para;</a></h3>
+<pre><code>These additional implementations are beneficial for enhanced
+testing and iteration of your prototype.
+</code></pre>
+<ol>
+<li><strong>Player Skill for Dealing Damage</strong> <em>(Approx. 30 minutes)</em><ul>
+<li>Introduce a skill that allows the player to deal damage to enemies in proximity.</li>
+<li>Provide UI feedback to indicate the skill's activation and effect.</li>
+</ul>
+</li>
+<li><strong>Game Controller with States and UI</strong> <em>(Approx. 40 minutes)</em><ul>
+<li>Create a game controller to manage different game states (start, game, end).</li>
+<li>Design UI elements to convey game state transitions effectively.</li>
+</ul>
+</li>
+<li><strong>Audio Options and Sound Effects</strong> <em>(Approx. 20 minutes)</em><ul>
+<li>Incorporate audio options to control sound settings.</li>
+<li>Implement relevant sound effects to enhance the game experience.</li>
+</ul>
+</li>
+</ol>
+<p>Feel free to refer to the accompanying video showcasing the finished game. Let's start building your prototype step by step!</p>
+<p><img alt="game-gif_AdobeExpress.gif" src="../Media/game-gif_AdobeExpress.gif" /></p>
+<hr />
+<hr />
+<h3 id="lets-get-started">Lets get started<a class="headerlink" href="#lets-get-started" title="Permanent link">&para;</a></h3>
+<h4 id="1-initial-setup">1. Initial Setup<a class="headerlink" href="#1-initial-setup" title="Permanent link">&para;</a></h4>
+<p>In this section, we'll set up the foundational elements needed for this prototype. We'll create a <code>ScriptableObject</code> named <code>GameData</code> to manage shared variables, events, and references between different features of the prototype. This can be done since this will be a single player game. The approach for a multiplayer game could be different.</p>
+<p><strong>1.1 Creating the GameData ScriptableObject</strong></p>
+<p>To centralize essential data and references, follow these steps:</p>
+<ol>
+<li>Create a new C# script named <code>GameData</code> and attach it to a new <code>ScriptableObject</code>.
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
+
+<span class="na">[CreateAssetMenu(fileName = &quot;GameData&quot;, menuName = &quot;GameData&quot;)]</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">GameData</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ScriptableObject</span><span class="w">  </span>
+<span class="p">{</span>
+
+<span class="p">}</span>
+</code></pre></div></li>
+<li>You can remove the <code>CreateAssetMenu</code> attribute once the <code>GameData</code> asset is created since only one instance is needed.</li>
+</ol>
+<p><strong>1.2 Using GameData References</strong></p>
+<p>In your project's scripts, you'll frequently reference the <code>GameData</code> to access shared data.</p>
+<p><strong>1.3 Creating a New Scene</strong></p>
+<p>Start your prototype with a clean slate. Create a new scene and name it according to your preference.</p>
+<p>With the initial setup in place, we're ready to begin building the individual components of this prototype. Let's move on to the next steps!</p>
+<hr />
+<h4 id="2-player-movement-and-camera-setup">2. Player, Movement and Camera Setup<a class="headerlink" href="#2-player-movement-and-camera-setup" title="Permanent link">&para;</a></h4>
+<p>In this section, we'll work on setting up the player's character movement and camera functionality. You can either use the provided sample player or integrate your own character controller, depending on your preference.</p>
+<p><strong>2.1 Integrating the Isometric Camera</strong></p>
+<p>Follow these steps to integrate the isometric camera into your player character:</p>
+<ol>
+<li>Drag and drop the isometric camera prefab from <code>PrototypingToolkit/Cameras/IsometricCamera</code> into your player's hierarchy.</li>
+<li>Adjust the camera's target to ensure it's positioned correctly in relation to your character.</li>
+<li>Customize Cinemachine settings as needed to achieve your desired camera behavior.</li>
+</ol>
+<p><strong>2.2 Setting Up Input Controls</strong></p>
+<p>To enable player movement, you'll need to create an <code>InputActionMap</code> with WASD bindings for movement controls.</p>
+<p><strong>2.3 Creating Player Settings</strong></p>
+<p>For player settings, consider creating <a href="../Core%20Modules/Variables/">Variables</a> such as <code>currentSpeed</code> and <code>maxSpeed</code> for more flexible adjustments:</p>
+<ol>
+<li>Right-click in your project, navigate to <code>Create/PrototypingToolkit/Variables/FloatVariable</code>, and name it appropriately.</li>
+<li>Reference the created variable in your <code>GameData</code> script. You can access its value using <code>Get()</code> and set it using <code>Set(value)</code>.</li>
+</ol>
+<p><strong>2.4 Moving Ground Integration</strong></p>
+<p>Ensure that your player has a collider component for future steps and that its tag is set to "Player". Implement a ground that moves along with the player's character. You can also remove the collider from the ground since we are not going to work with physics for now.</p>
+<p>At this point, your project, scene, and player should resemble the setup shown below:
+<img alt="Pasted image 20230812103858.png" src="../Media/Pasted%20image%2020230812103858.png" /></p>
+<p>With the player, movement controls, and camera setup in place, we're making great progress. Let's move on to the next steps!</p>
+<hr />
+<h5 id="3-player-health-controller-with-damage-event">3. Player Health Controller with Damage Event<a class="headerlink" href="#3-player-health-controller-with-damage-event" title="Permanent link">&para;</a></h5>
+<p>In this section, we'll implement a player health system that responds to damage events and provides UI feedback for the player's health status.</p>
+<p><strong>3.1 Setting Up Player Health Variables</strong></p>
+<p>To create a health system, start by setting up a <a href="../Core%20Modules/Variables/">FloatVariable</a> named <code>PlayerHealth_FloatVariable</code> with a start value of 100. This variable will track the player's health throughout the game.</p>
+<p><strong>3.2 Creating Health Bar UI</strong></p>
+<ol>
+<li>Add a hud canvas to your scene and include two simple images:<ul>
+<li>One as the background in a dark color.</li>
+<li>Another for the player's health bar, set to red with the Image Type set to "Filled."</li>
+</ul>
+</li>
+</ol>
+<p><strong>3.3 Implementing HealthBarUIController</strong></p>
+<p>The <code>HealthBarUIController</code> script is crucial for updating the health bar UI in response to player health changes. To set this up:</p>
+<ol>
+<li>Create an EmptyEvent by right-clicking in the project and selecting <code>Create/PrototypingToolkit/Events/EmptyEvent.</code> Name it <code>PlayerHealthChanged_EmptyEvent</code> and attach it to the <code>PlayerHealth_FloatVariable.</code></li>
+<li>Implement the <code>HealthBarUIController</code> script as follows:
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">HealthBarUIController</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span><span class="w">  </span>
+<span class="p">{</span><span class="w">  </span>
+<span class="w">    </span><span class="na">[Header(&quot;Game Data&quot;)]</span><span class="w">  </span>
+<span class="w">    </span><span class="na">[SerializeField]</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="n">GameData</span><span class="w"> </span><span class="n">gameData</span><span class="p">;</span><span class="w">  </span>
+
+<span class="w">    </span><span class="na">[Header(&quot;Internal Refs&quot;)]</span><span class="w">  </span>
+<span class="w">    </span><span class="na">[SerializeField]</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="n">Image</span><span class="w"> </span><span class="n">bar</span><span class="p">;</span><span class="w">  </span>
+
+<span class="w">    </span><span class="na">[Header(&quot;Debug&quot;)]</span><span class="w">  </span>
+<span class="w">    </span><span class="na">[SerializeField]</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">targetFillAmount</span><span class="p">;</span><span class="w">  </span>
+
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnEnable</span><span class="p">()</span><span class="w">  </span>
+<span class="w">    </span><span class="p">{</span><span class="w">  </span>
+<span class="w">        </span><span class="n">gameData</span><span class="p">.</span><span class="n">PlayerHealth</span><span class="p">.</span><span class="n">OnCurrentChanged</span>
+<span class="w">        </span><span class="p">.</span><span class="n">Register</span><span class="p">(</span><span class="n">OnPlayerHealthChanged</span><span class="p">);</span><span class="w">  </span>
+
+<span class="w">        </span><span class="n">OnPlayerHealthChanged</span><span class="p">();</span><span class="w">  </span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span>
+
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnDisable</span><span class="p">()</span><span class="w">  </span>
+<span class="w">    </span><span class="p">{</span><span class="w">  </span>
+<span class="w">        </span><span class="n">gameData</span><span class="p">.</span><span class="n">PlayerHealth</span><span class="p">.</span><span class="n">OnCurrentChanged</span>
+<span class="w">        </span><span class="p">.</span><span class="n">Unregister</span><span class="p">(</span><span class="n">OnPlayerHealthChanged</span><span class="p">);</span><span class="w"> </span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span>
+
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnPlayerHealthChanged</span><span class="p">()</span><span class="w">  </span>
+<span class="w">    </span><span class="p">{</span><span class="w">  </span>
+<span class="w">        </span><span class="n">targetFillAmount</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="n">gameData</span><span class="p">.</span><span class="n">PlayerCurrentHealth</span><span class="p">.</span><span class="n">Get</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">gameData</span><span class="p">.</span><span class="n">PlayerCurrentHealth</span><span class="p">.</span><span class="n">StartValue</span><span class="p">;</span><span class="w">  </span>
+<span class="w">        </span><span class="n">bar</span><span class="p">.</span><span class="n">fillAmount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">targetFillAmount</span><span class="p">;</span><span class="w">  </span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ol>
+<p><strong>3.4 Introducing Player Damage Interaction</strong></p>
+<p>Simulating player damage involves adding an <code>OnTriggerEnter</code> method to the player's collider. This method raises the <code>DealDamageToPlayer_EmptyEvent</code> when a triggering object enters:
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Damageable</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span><span class="w">  </span>
+<span class="p">{</span><span class="w">  </span>
+<span class="w">    </span><span class="na">[Header(&quot;Data&quot;)]</span><span class="w">  </span>
+<span class="w">    </span><span class="na">[SerializeField]</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="n">GameData</span><span class="w"> </span><span class="n">gameData</span><span class="p">;</span><span class="w">  </span>
+
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnTriggerEnter</span><span class="p">(</span><span class="n">Collider</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w">  </span>
+<span class="w">    </span><span class="p">{</span><span class="w">  </span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">CompareTag</span><span class="p">(</span><span class="s">&quot;Player&quot;</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w">  </span>
+
+<span class="w">        </span><span class="n">gameData</span><span class="p">.</span><span class="n">DealDamageToPlayer</span><span class="p">.</span><span class="n">Raise</span><span class="p">();</span><span class="w">  </span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>3.5 Implementing the Health Controller</strong></p>
+<p>The <code>HealthController</code> script manages player health manipulation. It performs the following:
+- Subtracts the specified damage amount from the player's health.
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">HealthController</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span><span class="w">  </span>
+<span class="p">{</span><span class="w">  </span>
+<span class="w">    </span><span class="na">[Header(&quot;Data&quot;)]</span><span class="w">  </span>
+<span class="w">    </span><span class="na">[SerializeField]</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="n">GameData</span><span class="w"> </span><span class="n">gameData</span><span class="p">;</span><span class="w">  </span>
+
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnEnable</span><span class="p">()</span><span class="w">  </span>
+<span class="w">    </span><span class="p">{</span><span class="w">  </span>
+<span class="w">        </span><span class="n">gameData</span><span class="p">.</span><span class="n">DealDamageToPlayer</span><span class="p">.</span><span class="n">Register</span><span class="p">(</span><span class="n">OnDamageToPlayer</span><span class="p">);</span><span class="w">  </span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span>
+
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnDisable</span><span class="p">()</span><span class="w">  </span>
+<span class="w">    </span><span class="p">{</span><span class="w">  </span>
+<span class="w">        </span><span class="n">gameData</span><span class="p">.</span><span class="n">DealDamageToPlayer</span><span class="p">.</span><span class="n">Unregister</span><span class="p">(</span><span class="n">OnDamageToPlayer</span><span class="p">);</span><span class="w">  </span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span>
+
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnDamageToPlayer</span><span class="p">()</span><span class="w">  </span>
+<span class="w">    </span><span class="p">{</span><span class="w">  </span>
+<span class="w">        </span><span class="n">gameData</span><span class="p">.</span><span class="n">PlayerCurrentHealth</span><span class="p">.</span><span class="n">AddToCurrent</span><span class="p">(</span><span class="w"> </span><span class="o">-</span><span class="m">10</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span>
+<span class="p">}</span>
+</code></pre></div>
+Later on we will introduce a FloatVariable for the damage amount.</p>
+<p><strong>3.6 Testing the Health System</strong></p>
+<p>For testing purposes, a button method has been added to <code>GameData</code> to simulate player damage during runtime:
+<div class="highlight"><pre><span></span><code><span class="na">[ButtonMethod]</span><span class="w">  </span>
+<span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DamagePlayerTest</span><span class="p">()</span><span class="w">  </span>
+<span class="p">{</span><span class="w">  </span>
+<span class="w">    </span><span class="n">DealDamageToPlayer</span><span class="p">.</span><span class="n">Raise</span><span class="p">();</span><span class="w">  </span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>With the player health controller and damage events set up, your game prototype is becoming more interactive and engaging. In the next section, we'll delve into enemy spawning and interactions to further enhance the game loop.</p>
+<hr />
+<h5 id="4-enemies-and-enemyspawner">4. Enemies and EnemySpawner<a class="headerlink" href="#4-enemies-and-enemyspawner" title="Permanent link">&para;</a></h5>
+<p>To introduce enemies into your game loop, follow these steps:</p>
+<p><strong>4.1 Creating the Enemy Prefab</strong></p>
+<ol>
+<li>Create a new model with a collider, similar to the player's setup.</li>
+<li>Design the enemy with distinct materials and colors to differentiate it from the player.</li>
+<li>Establish essential <a href="../Core%20Modules/Variables/">Variables</a> for the enemy, such as <code>movementSpeed</code> and <code>damage</code>. The damage value can now be integrated into the player's <code>HealthController</code>.</li>
+</ol>
+<p><strong>4.2 Enemy Movement Towards the Player</strong></p>
+<ol>
+<li>Implement the enemy's movement logic to make them walk towards and pass the player. Utilize the <code>Update</code> method for this behavior.</li>
+<li>To avoid direct player references in the enemy scripts, add the Player Transform to the <code>GameData</code> during the player's <code>Awake</code> method. This way, the enemies can access the player's position in <code>OnEnable</code> via the <code>GameData</code> without direct coupling.</li>
+</ol>
+<p><strong>4.3 Creating the EnemySpawner</strong></p>
+<ol>
+<li>Construct an EnemySpawner GameObject nested within the player to facilitate enemy spawning.</li>
+<li>Define necessary <a href="../Core%20Modules/Variables/">Variables</a> within the EnemySpawner for <code>spawnRadius</code>, <code>deSpawnRadius</code>, and <code>spawnRate</code>.<ul>
+<li>Ensure that the <code>deSpawnRadius</code> value exceeds the <code>spawnRadius</code> to enable proper despawning behavior.</li>
+</ul>
+</li>
+<li>Develop a coroutine within the EnemySpawner that generates enemies at random positions within the specified <code>spawnRadius</code>. Control the spawning rate using the <code>spawnRate</code> variable.</li>
+<li>Attach a collider component to the EnemySpawner GameObject and implement <code>OnTriggerExit</code>. This function will handle enemy despawning when they move beyond the <code>deSpawnRadius</code>.</li>
+<li><strong>Note:</strong> The EnemySpawner, being part of the player, should also be tagged with "Player" to ensure consistent behavior.</li>
+</ol>
+<p><em>With these steps completed, you've successfully established the basic game loop. The game is now playable, and enemies are actively engaging with the player. The subsequent sections will delve into adding more features and enhancements to your prototype.</em></p>
+<hr />
+<h2 id="lets-add-more">Lets add more<a class="headerlink" href="#lets-add-more" title="Permanent link">&para;</a></h2>
+<h5 id="5-a-skill-to-deal-damage-to-enemies-with-ui-feedback">5. A skill to deal damage to enemies with UI feedback<a class="headerlink" href="#5-a-skill-to-deal-damage-to-enemies-with-ui-feedback" title="Permanent link">&para;</a></h5>
+<p>For this we create a new prefab that sits inside the player
+- it need a Rigidbody (because it handles its own collisions with the enemies) and the "Player" tag so that it does not collide with the player
+- it needs a collider in a child and some sort of visual in our case its a sprite on the ground
+    - the collider will destroy enemies in OnTriggerEnter
+- we also need a new inputAction to use the skill, so it needs to be added to the InputActionMap
+- and we add some <a href="../Core%20Modules/Variables/">Variables</a> to the GameData for settings like coolDown and curCoolDown
+It could look like this:
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">DamageSkillController</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span><span class="w">  </span>
+<span class="p">{</span><span class="w">  </span>
+<span class="w">   </span><span class="na">[Header(&quot;Data&quot;)]</span><span class="w">  </span>
+<span class="w">   </span><span class="na">[SerializeField]</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="n">GameData</span><span class="w"> </span><span class="n">gameData</span><span class="p">;</span><span class="w">  </span>
+
+<span class="w">   </span><span class="na">[Header(&quot;Internal Ref&quot;)]</span><span class="w">  </span>
+<span class="w">   </span><span class="na">[SerializeField]</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="n">GameObject</span><span class="w"> </span><span class="n">damageCollider</span><span class="p">;</span><span class="w">  </span>
+
+<span class="w">   </span><span class="na">[Header(&quot;Debug&quot;)]</span><span class="w">  </span>
+<span class="w">   </span><span class="na">[SerializeField]</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isPressed</span><span class="p">;</span><span class="w">  </span>
+
+<span class="w">   </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnEnable</span><span class="p">()</span><span class="w">  </span>
+<span class="w">   </span><span class="p">{</span><span class="w">  </span>
+<span class="w">      </span><span class="n">gameData</span><span class="p">.</span><span class="n">SkillInput</span><span class="p">.</span><span class="n">action</span><span class="p">.</span><span class="n">Enable</span><span class="p">();</span><span class="w">  </span>
+
+<span class="w">      </span><span class="n">gameData</span><span class="p">.</span><span class="n">SkillInput</span><span class="p">.</span><span class="n">action</span><span class="p">.</span><span class="n">started</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">OnSkillInput</span><span class="p">;</span><span class="w">  </span>
+<span class="w">      </span><span class="n">gameData</span><span class="p">.</span><span class="n">SkillInput</span><span class="p">.</span><span class="n">action</span><span class="p">.</span><span class="n">canceled</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">OnSkillInput</span><span class="p">;</span><span class="w">  </span>
+
+<span class="w">      </span><span class="n">damageCollider</span><span class="p">.</span><span class="n">SetActive</span><span class="p">(</span><span class="k">false</span><span class="p">);</span><span class="w">  </span>
+<span class="w">   </span><span class="p">}</span><span class="w">  </span>
+
+<span class="w">   </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnDisable</span><span class="p">()</span><span class="w">  </span>
+<span class="w">   </span><span class="p">{</span><span class="w">  </span>
+<span class="w">      </span><span class="n">gameData</span><span class="p">.</span><span class="n">SkillInput</span><span class="p">.</span><span class="n">action</span><span class="p">.</span><span class="n">started</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">OnSkillInput</span><span class="p">;</span><span class="w">  </span>
+<span class="w">      </span><span class="n">gameData</span><span class="p">.</span><span class="n">SkillInput</span><span class="p">.</span><span class="n">action</span><span class="p">.</span><span class="n">canceled</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">OnSkillInput</span><span class="p">;</span><span class="w">  </span>
+
+<span class="w">      </span><span class="n">gameData</span><span class="p">.</span><span class="n">SkillInput</span><span class="p">.</span><span class="n">action</span><span class="p">.</span><span class="n">Disable</span><span class="p">();</span><span class="w">  </span>
+<span class="w">   </span><span class="p">}</span><span class="w">  </span>
+
+<span class="w">   </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnSkillInput</span><span class="p">(</span><span class="n">InputAction</span><span class="p">.</span><span class="n">CallbackContext</span><span class="w"> </span><span class="n">context</span><span class="p">)</span><span class="w">  </span>
+<span class="w">   </span><span class="p">{</span><span class="w">  </span>
+<span class="w">      </span><span class="n">isPressed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">context</span><span class="p">.</span><span class="n">started</span><span class="p">;</span><span class="w">  </span>
+<span class="w">   </span><span class="p">}</span><span class="w">  </span>
+
+<span class="w">   </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Update</span><span class="p">()</span><span class="w">  </span>
+<span class="w">   </span><span class="p">{</span><span class="w">  </span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gameData</span><span class="p">.</span><span class="n">CurCoolDown</span><span class="p">.</span><span class="n">Get</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w">  </span>
+<span class="w">      </span><span class="p">{</span><span class="w">  </span>
+<span class="w">         </span><span class="n">gameData</span><span class="p">.</span><span class="n">CurCoolDown</span><span class="p">.</span><span class="n">AddToCurrent</span><span class="p">(</span><span class="o">-</span><span class="w"> </span><span class="n">Time</span><span class="p">.</span><span class="n">deltaTime</span><span class="p">);</span><span class="w">  </span>
+<span class="w">      </span><span class="p">}</span><span class="w">  </span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="nf">if</span><span class="w"> </span><span class="p">(</span><span class="n">isPressed</span><span class="p">)</span><span class="w">  </span>
+<span class="w">      </span><span class="p">{</span><span class="w">  </span>
+<span class="w">         </span><span class="n">DoSkill</span><span class="p">();</span><span class="w">  </span>
+<span class="w">      </span><span class="p">}</span><span class="w">  </span>
+<span class="w">   </span><span class="p">}</span><span class="w">  </span>
+
+<span class="w">   </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DoSkill</span><span class="p">()</span><span class="w">  </span>
+<span class="w">   </span><span class="p">{</span><span class="w">  </span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">gameData</span><span class="p">.</span><span class="n">CurCoolDown</span><span class="p">.</span><span class="n">Get</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">0</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w">  </span>
+
+<span class="w">      </span><span class="n">StartCoroutine</span><span class="p">(</span><span class="n">DealDamage</span><span class="p">());</span><span class="w">  </span>
+<span class="w">   </span><span class="p">}</span><span class="w">  </span>
+
+<span class="w">   </span><span class="k">private</span><span class="w"> </span><span class="n">IEnumerator</span><span class="w"> </span><span class="nf">DealDamage</span><span class="p">()</span><span class="w">  </span>
+<span class="w">   </span><span class="p">{</span><span class="w">  </span>
+<span class="w">      </span><span class="n">damageCollider</span><span class="p">.</span><span class="n">SetActive</span><span class="p">(</span><span class="k">true</span><span class="p">);</span><span class="w">  </span>
+<span class="w">      </span><span class="n">RefreshCoolDown</span><span class="p">();</span><span class="w">  </span>
+
+<span class="w">      </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">WaitForSeconds</span><span class="p">(</span><span class="n">gameData</span><span class="p">.</span><span class="n">SkillActiveTime</span><span class="p">.</span><span class="n">Get</span><span class="p">());</span><span class="w">  </span>
+
+<span class="w">      </span><span class="n">damageCollider</span><span class="p">.</span><span class="n">SetActive</span><span class="p">(</span><span class="k">false</span><span class="p">);</span><span class="w">  </span>
+<span class="w">   </span><span class="p">}</span><span class="w">  </span>
+
+<span class="w">   </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">RefreshCoolDown</span><span class="p">()</span><span class="w">  </span>
+<span class="w">   </span><span class="p">{</span><span class="w">  </span>
+<span class="w">      </span><span class="n">gameData</span><span class="p">.</span><span class="n">CurCoolDown</span><span class="p">.</span><span class="n">Set</span><span class="p">(</span><span class="n">gameData</span><span class="p">.</span><span class="n">SkillCoolDown</span><span class="p">.</span><span class="n">Get</span><span class="p">());</span><span class="w">  </span>
+<span class="w">   </span><span class="p">}</span><span class="w">  </span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Next we need another filled image in our hud that will indicate weather our skill is on coolDown or not
+- for that we check in the Update method if the curCoolDown is lower or the same as the coolDown and set the fillAmount respectively</p>
+<h5 id="6-gamecontroller-with-ui">6. GameController with UI<a class="headerlink" href="#6-gamecontroller-with-ui" title="Permanent link">&para;</a></h5>
+<p>For this we need a GameController inheriting form <a href="../Core%20Modules/State%20Logic/#3-create-a-new-statemachine">StateMachine</a>
+- it need the StartState GameState and EndState
+- will instantiate them initialize with the StartState and will then react to events in order to trigger state transitions
+- it will hold all the necessary scene references in order to give them to the states
+- these states will than handle logic in their Enter and Exit methods in order to represent the state properly</p>
+<p>We also need two new canvases
+- a start canvas which will have some Information about the rules and a start button
+- a end canvas with a restart button
+- the buttons will trigger events which will be handled by the GameController</p>
+<p>We also need a container for the enemies that can be cleared on state transitions
+The GameController could look like this:
+<div class="highlight"><pre><span></span><code><span class="na">[DefaultExecutionOrder(-10)]</span><span class="w">  </span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">GameController</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">StateMachine</span><span class="w">  </span>
+<span class="p">{</span><span class="w">  </span>
+<span class="w">   </span><span class="na">[Header(&quot;Data&quot;)]</span><span class="w">  </span>
+<span class="w">   </span><span class="na">[SerializeField]</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="n">GameData</span><span class="w"> </span><span class="n">gameData</span><span class="p">;</span><span class="w">  </span>
+
+<span class="w">   </span><span class="na">[Header(&quot;Scene Refs&quot;)]</span><span class="w">  </span>
+<span class="w">   </span><span class="na">[SerializeField]</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="n">GameObject</span><span class="w"> </span><span class="n">player</span><span class="p">;</span><span class="w">  </span>
+<span class="w">   </span><span class="na">[SerializeField]</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="n">EnemyContainerController</span><span class="w"> </span><span class="n">enemyContainerController</span><span class="p">;</span><span class="w">  </span>
+
+<span class="w">   </span><span class="na">[SerializeField]</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="n">GameObject</span><span class="w"> </span><span class="n">hud</span><span class="p">;</span><span class="w">  </span>
+<span class="w">   </span><span class="na">[SerializeField]</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="n">GameObject</span><span class="w"> </span><span class="n">startScreen</span><span class="p">;</span><span class="w">  </span>
+<span class="w">   </span><span class="na">[SerializeField]</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="n">GameObject</span><span class="w"> </span><span class="n">endScreen</span><span class="p">;</span><span class="w">  </span>
+
+<span class="w">   </span><span class="k">private</span><span class="w"> </span><span class="n">StartState</span><span class="w"> </span><span class="n">startState</span><span class="p">;</span><span class="w">  </span>
+<span class="w">   </span><span class="k">private</span><span class="w"> </span><span class="n">GameState</span><span class="w"> </span><span class="n">gameState</span><span class="p">;</span><span class="w">  </span>
+<span class="w">   </span><span class="k">private</span><span class="w"> </span><span class="n">EndState</span><span class="w"> </span><span class="n">endState</span><span class="p">;</span><span class="w">  </span>
+
+<span class="w">   </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Awake</span><span class="p">()</span><span class="w">  </span>
+<span class="w">   </span><span class="p">{</span><span class="w">  </span>
+<span class="w">      </span><span class="n">player</span><span class="p">.</span><span class="n">SetActive</span><span class="p">(</span><span class="k">false</span><span class="p">);</span><span class="w">  </span>
+<span class="w">      </span><span class="n">enemyContainerController</span><span class="p">.</span><span class="n">gameObject</span><span class="p">.</span><span class="n">SetActive</span><span class="p">(</span><span class="k">false</span><span class="p">);</span><span class="w">  </span>
+<span class="w">      </span><span class="n">hud</span><span class="p">.</span><span class="n">SetActive</span><span class="p">(</span><span class="k">false</span><span class="p">);</span><span class="w">  </span>
+<span class="w">      </span><span class="n">endScreen</span><span class="p">.</span><span class="n">SetActive</span><span class="p">(</span><span class="k">false</span><span class="p">);</span><span class="w">  </span>
+
+<span class="w">      </span><span class="n">gameData</span><span class="p">.</span><span class="n">ReStart</span><span class="p">.</span><span class="n">Register</span><span class="p">(</span><span class="n">EnterStartState</span><span class="p">);</span><span class="w">  </span>
+<span class="w">      </span><span class="n">gameData</span><span class="p">.</span><span class="n">GameStart</span><span class="p">.</span><span class="n">Register</span><span class="p">(</span><span class="n">EnterGameState</span><span class="p">);</span><span class="w">  </span>
+<span class="w">      </span><span class="n">gameData</span><span class="p">.</span><span class="n">GameOver</span><span class="p">.</span><span class="n">Register</span><span class="p">(</span><span class="n">EnterEndState</span><span class="p">);</span><span class="w">  </span>
+
+<span class="w">      </span><span class="n">startState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StartState</span><span class="p">(</span><span class="n">gameData</span><span class="p">,</span><span class="w"> </span><span class="n">startScreen</span><span class="p">);</span><span class="w">  </span>
+<span class="w">      </span><span class="n">gameState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GameState</span><span class="p">(</span><span class="n">gameData</span><span class="p">,</span><span class="w"> </span><span class="n">player</span><span class="p">,</span>
+<span class="w">                                  </span><span class="n">enemyContainerController</span><span class="p">,</span><span class="w"> </span><span class="n">hud</span><span class="p">,</span><span class="w"> </span><span class="n">startScreen</span><span class="p">);</span><span class="w">  </span>
+<span class="w">      </span><span class="n">endState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EndState</span><span class="p">(</span><span class="n">gameData</span><span class="p">,</span><span class="w"> </span><span class="n">endScreen</span><span class="p">);</span><span class="w">  </span>
+
+<span class="w">      </span><span class="n">Initialize</span><span class="p">(</span><span class="n">startState</span><span class="p">);</span><span class="w">  </span>
+<span class="w">   </span><span class="p">}</span><span class="w">  </span>
+
+<span class="w">   </span><span class="na">[ButtonMethod]</span><span class="w">  </span>
+<span class="w">   </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">EnterStartState</span><span class="p">()</span><span class="w">  </span>
+<span class="w">   </span><span class="p">{</span><span class="w">  </span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">currentStateSO</span><span class="p">.</span><span class="n">Get</span><span class="p">()</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">StartState</span><span class="p">)</span><span class="w"> </span><span class="n">TransitionTo</span><span class="p">(</span><span class="n">startState</span><span class="p">);</span><span class="w">  </span>
+<span class="w">   </span><span class="p">}</span><span class="w">  </span>
+
+<span class="w">   </span><span class="na">[ButtonMethod]</span><span class="w">  </span>
+<span class="w">   </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">EnterGameState</span><span class="p">()</span><span class="w">  </span>
+<span class="w">   </span><span class="p">{</span><span class="w">  </span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">currentStateSO</span><span class="p">.</span><span class="n">Get</span><span class="p">()</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">GameState</span><span class="p">)</span><span class="w"> </span><span class="n">TransitionTo</span><span class="p">(</span><span class="n">gameState</span><span class="p">);</span><span class="w">  </span>
+<span class="w">   </span><span class="p">}</span><span class="w">  </span>
+
+<span class="w">   </span><span class="na">[ButtonMethod]</span><span class="w">  </span>
+<span class="w">   </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">EnterEndState</span><span class="p">()</span><span class="w">  </span>
+<span class="w">   </span><span class="p">{</span><span class="w">  </span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">currentStateSO</span><span class="p">.</span><span class="n">Get</span><span class="p">()</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">EndState</span><span class="p">)</span><span class="w"> </span><span class="n">TransitionTo</span><span class="p">(</span><span class="n">endState</span><span class="p">);</span><span class="w">  </span>
+<span class="w">   </span><span class="p">}</span><span class="w">  </span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h5 id="7-sounds-and-audio-options">7. Sounds and audio options<a class="headerlink" href="#7-sounds-and-audio-options" title="Permanent link">&para;</a></h5>
+<p>For that we to get some Sounds. We can take some free sounds from <a href="https://www.kenney.nl/assets/impact-sounds">Kenny</a>
+Lets add some sounds for the start button, the dealDamageToPlayer event, the skill and for game over.
+First lets add an AudioManager to your scene
+- PrototypingToolkit/Audio/Prefabs/AudioManager
+- also right-click in the hierarchy under PrototypingToolkit/AudioManager</p>
+<p>Ceate <a href="../Feature%20Modules/Audio/Audio%20Event%20Data/">Audio Event Data</a> for each Sound
+- set the corresponding mixer group
+- add the audio files to the Audio Clips List
+- adjust Volume and pitch</p>
+<p>There a two ways to raise audio events with audio event data
+- either in the <a href="../Feature%20Modules/Audio/Audio%20Event%20Data/#3b-raise-audio-events-via-inspector">inspector</a> with unity events and the <a href="../Feature%20Modules/Audio/Audio%20Data/#play-audioevent">Play AudioEvent</a>
+- or via code by referencing the audio event data, raising it and sending the sound with it</p>
+<p>As an example we can create an empty GameObject add a EmptyEventListener and react to the "DealDamageToPlayer_EmptyEvent" and add the <a href="../Feature%20Modules/Audio/Audio%20Data/#play-audioevent">Play AudioEvent</a> and our created <a href="../Feature%20Modules/Audio/Audio%20Event%20Data/">Audio Event Data</a> with the corresponding sound(s)<img alt="Pasted image 20230812175748.png" src="../Media/Pasted%20image%2020230812175748.png" /></p>
+<p>A more convenient way would be to raise them where they happen (for example in the HealthController)
+<div class="highlight"><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnDamageToPlayer</span><span class="p">()</span><span class="w">  </span>
+<span class="p">{</span><span class="w">  </span>
+<span class="w">    </span><span class="n">gameData</span><span class="p">.</span><span class="n">PlayerHealth</span><span class="p">.</span><span class="n">AddToCurrent</span><span class="p">(</span><span class="o">-</span><span class="n">gameData</span><span class="p">.</span><span class="n">EnemyDamage</span><span class="p">.</span><span class="n">Get</span><span class="p">());</span><span class="w">  </span>
+<span class="w">    </span><span class="n">gameData</span><span class="p">.</span><span class="n">AudioData</span><span class="p">.</span><span class="n">PlayAudioEvent</span><span class="p">.</span><span class="n">Raise</span><span class="p">(</span><span class="n">gameData</span><span class="p">.</span><span class="n">BumpSound</span><span class="p">);</span><span class="w">  </span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gameData</span><span class="p">.</span><span class="n">PlayerHealth</span><span class="p">.</span><span class="n">Get</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w">  </span>
+<span class="w">    </span><span class="p">{</span><span class="w">  </span>
+<span class="w">        </span><span class="n">gameData</span><span class="p">.</span><span class="n">GameOver</span><span class="p">.</span><span class="n">Raise</span><span class="p">();</span><span class="w">  </span>
+<span class="w">        </span><span class="n">gameData</span><span class="p">.</span><span class="n">AudioData</span><span class="p">.</span><span class="n">PlayAudioEvent</span><span class="p">.</span><span class="n">Raise</span><span class="p">(</span><span class="n">gameData</span><span class="p">.</span><span class="n">GameOverSound</span><span class="p">);</span><span class="w">  </span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Another thing we need to do is add some Audio Options 
+For that we need two things:</p>
+<p>We need to add an Audio_slider to our start canvas
+- PrototypingToolkit/Options/Audio/Prefabs/Audio_Slider
+- reference the Sound_VolumeFloatVariable</p>
+<p>And we have to add the AudioDataManager to our scene
+- PrototypingToolkit/Audio/Prefabs/AudioDataManager
+- also right-click in the hierarchy under PrototypingToolkit/AudioDataManager</p>
+<p><em>And that is it now we have a prototype on which we can iterate on.</em></p>
+<hr />
+<h5 id="now-its-your-turn">Now its your turn:<a class="headerlink" href="#now-its-your-turn" title="Permanent link">&para;</a></h5>
+<pre><code>Add some extras to learn more about PTK,
+and improve your playtesting environment:
+</code></pre>
+<ul>
+<li>Add a timer and an indicator that shows how many enemies you have surpassed</li>
+<li>Add more visuals to give better feedback for player movement</li>
+<li>Add an Input rebind menu for the player controls</li>
+<li>Add another skill (a dash perhaps)</li>
+<li>Add a progression which changes the enemy spawn rate over time</li>
+<li>Try out different cameras and see how gameplay changes</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
