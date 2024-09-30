@@ -39,14 +39,14 @@ You can also [[Create your own typed EmptyEvent]] if needed.
 newEmptyEvent.Raise();
 ```
 
-#### 5a. Respond to the Event in the Inspector with EmptyEventListener
+#### 5a. React to the Event in the Inspector with EmptyEventListener
 
 ###### EmptyEventListener
 
-The EmptyEventListener component enables easy event handling for EmptyEvents in Unity. By attaching it to a GameObject, you can define actions or behaviors that trigger when an EmptyEvent is raised. This decouples event senders and receivers, promoting modular and maintainable code. With the EmptyEventListener, you can seamlessly respond to events without direct code coupling. This documentation guides you through the setup and usage of the EmptyEventListener component to handle EmptyEvents efficiently in your Unity project.
+The EmptyEventListener component enables easy event handling for EmptyEvents in Unity. By attaching it to a GameObject, you can define actions or behaviors that trigger when an EmptyEvent is raised. This decouples event senders and receivers, promoting modular and maintainable code. With the EmptyEventListener, you can seamlessly react to events without direct code coupling. This documentation guides you through the setup and usage of the EmptyEventListener component to handle EmptyEvents efficiently in your Unity project.
 
 -  Add the EmptyEventListener Component to any GameObject
--  And add the wanted Responses
+-  And add the wanted Reaction
 
 ![[Pasted image 20230623125222.png]]
 
@@ -54,7 +54,7 @@ The EmptyEventListener component enables easy event handling for EmptyEvents in 
 
 #### 5b. React to the Event via Code
 
--  Reference the Event and respond to it if needed
+-  Reference the Event and react to it if needed
 
 ```csharp
 [SerializeField] private EmptyEvent newEmptyEvent;

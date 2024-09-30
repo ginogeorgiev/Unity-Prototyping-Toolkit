@@ -1,5 +1,5 @@
 
-DataEvents are a powerful mechanism in your project that allow you to send events along with associated data at runtime. With DataEvents, you can easily notify other systems, objects, or scripts about specific occurrences and provide them with relevant information. These events can be listened to and responded to in code, enabling seamless communication and coordination between different parts of your project. Whether you need to trigger actions, update UI elements, or synchronize data between systems, DataEvents provide a flexible and efficient solution. This documentation will guide you through the process of creating, configuring, and using DataEvents effectively in your project.
+DataEvents are a powerful mechanism in your project that allow you to send events along with associated data at runtime. With DataEvents, you can easily notify other systems, objects, or scripts about specific occurrences and provide them with relevant information. These events can be listened to and reacted to in code, enabling seamless communication and coordination between different parts of your project. Whether you need to trigger actions, update UI elements, or synchronize data between systems, DataEvents provide a flexible and efficient solution. This documentation will guide you through the process of creating, configuring, and using DataEvents effectively in your project.
 
 ### How to create and use DataEvents.
 
@@ -33,7 +33,7 @@ newEmptyEvent.Raise(Something);
 #### 5. React to the Event via Code
 
 - Register the Event in OnEnable and Unregister it in OnDisable
-- Reference the Event and respond to it with parameter if needed
+- Reference the Event and react to it with parameter if needed
 
 ```csharp
 [SerializeField] private SomeDataEvent someDataEvent;
